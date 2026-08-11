@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tạp chí & Góc Nhìn - HUỲNH HOÀNG THỊNH</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .article-header {
+      padding: 100px 0 60px;
+      text-align: center;
+      background-color: var(--color-light-gray);
+      margin-bottom: 60px;
+    }
+    .article-title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      line-height: 1.2;
+    }
+    .article-meta {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .article-featured-image {
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
+    .article-featured-image img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .article-content {
+      max-width: 760px;
+      margin: 0 auto 100px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--color-body);
+    }
+    .article-content p {
+      margin-bottom: 24px;
+    }
+    /* Editorial Elements */
+    .article-content > p:first-of-type::first-letter {
+      float: left;
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 0.8;
+      padding-top: 4px;
+      padding-right: 12px;
+      color: var(--color-dark);
+    }
+    .pull-quote {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--color-dark);
+      margin: 40px -40px;
+      padding: 30px;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+    .key-takeaways {
+      background-color: var(--color-white);
+      border: 2px solid #d4af37; /* Matte Gold */
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 4px;
+    }
+    .key-takeaways h3 {
+      font-family: var(--font-serif);
+      color: #d4af37;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    .key-takeaways ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .key-takeaways li {
+      margin-bottom: 10px;
+    }
+    .article-content h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin: 40px 0 20px;
+      color: var(--color-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <a href="index.html#sell">Sell with Us</a>
+      <a href="index.html#agents">For Agents <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+      <a href="index.html#saved"><i class="fa-regular fa-heart"></i> Saved</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (Dark Version for inner pages) -->
+  <header class="main-header" style="position: static; background: var(--color-dark);">
+    <div class="container">
+      <div class="nav-row-top">
+        <button class="menu-toggle-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="index.html" class="brand-logo">HUỲNH HOÀNG THỊNH</a>
+        <div style="width: 24px;"></div>
+      </div>
+      <nav class="nav-menu-links">
+        <a href="index.html">Trang Chủ</a>
+        <a href="index.html#tab-realestate">Bất Động Sản</a>
+        <a href="index.html#tab-cars">Siêu Xe</a>
+        <a href="index.html#tab-yachts">Du Thuyền</a>
+        <a href="index.html#tab-editorial" class="active">Tạp chí</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="article-container">
+    <!-- Article content will be rendered here by JS -->
+    <div style="text-align: center; padding: 100px;">Đang tải bài viết...</div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-brand-title">HUỲNH HOÀNG THỊNH</div>
+          <p style="font-size: 0.85rem; line-height: 1.6; max-width: 320px; color: #888;">
+            Sàn giao dịch xa xỉ hàng đầu thế giới, cung cấp các danh mục bất động sản, siêu xe, du thuyền và chuyên cơ đẳng cấp nhất.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="footer-col-heading">Danh mục</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#tab-realestate">Bất động sản</a></li>
+            <li><a href="index.html#tab-cars">Ô tô</a></li>
+            <li><a href="index.html#tab-yachts">Du thuyền & Chuyên cơ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-heading">Công ty</h4>
+          <ul class="footer-links-list">
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Zalo Floating Button -->
+  <a href="https://zalo.me/0906060036" class="zalo-floating-btn" target="_blank" rel="noopener noreferrer">
+    <div class="zalo-pulse"></div>
+    <div class="zalo-icon"><i class="fa-solid fa-comment-dots"></i></div>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleId = parseInt(urlParams.get('id'));
+      
+      const container = document.getElementById('article-container');
+      
+      if (!articleId) {
+        container.innerHTML = '<div style="text-align: center; padding: 100px;">Không tìm thấy bài viết.</div>';
+        return;
+      }
+      
+      fetch('data/posts.json')
+        .then(response => response.json())
+        .then(posts => {
+          const post = posts.find(p => p.id === articleId);
+          if (post) {
+            document.title = post.title + ' - HUỲNH HOÀNG THỊNH';
+            
+            container.innerHTML = `
+              <div class="article-header">
+                <div class="container">
+                  <div class="article-meta">${post.date} &bull; TẠP CHÍ & GÓC NHÌN</div>
+                  <h1 class="article-title">${post.title}</h1>
+                </div>
+              </div>
+              
+              <div class="container">
+                <div class="article-featured-image">
+                  <img src="${post.image}" alt="${post.title}">
+                </div>
+                
+                <article class="article-content">
+                  ${post.content}
+                </article>
+              </div>
+            `;
+          } else {
+             container.innerHTML = '<div style="text-align: center; padding: 100px;">Không tìm thấy bài viết.</div>';
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          container.innerHTML = '<div style="text-align: center; padding: 100px;">Lỗi tải bài viết.</div>';
+        });
+    });
+  </script>
+</body>
+</html>
