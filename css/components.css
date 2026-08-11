@@ -250,6 +250,58 @@
   margin-bottom: 4px;
 }
 
+.article-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.magazine-dropcap::first-letter {
+  font-size: 4rem;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  padding-right: 12px;
+  padding-top: 4px;
+  color: var(--primary-color);
+  font-family: 'Playfair Display', serif;
+}
+
+.magazine-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary-color);
+  max-width: 80%;
+}
+
+.magazine-figure {
+  margin: 40px 0;
+  width: 100%;
+}
+
+.magazine-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.magazine-figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 10px;
+  font-style: italic;
+}
+
 .category-card-count {
   font-size: 0.75rem;
   font-weight: 600;
