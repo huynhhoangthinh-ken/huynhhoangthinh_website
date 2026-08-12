@@ -923,6 +923,15 @@ audio {
   color: var(--color-muted);
 }
 
+.grid-card-subtitle {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+  font-style: italic;
+}
+
 /* Tab Editorial Specific */
 .editorial-btn {
   display: inline-block;
