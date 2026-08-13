@@ -25,8 +25,12 @@
 <header class="main-header">
 <div class="container">
 <div class="nav-row-top">
-<a class="brand-logo" href="#">HUỲNH HOÀNG THỊNH</a>
-<div style="width: 24px;"></div> <!-- Spacer for flex alignment -->
+<!-- Hamburger — visible on mobile only (hidden via CSS on desktop) -->
+<button aria-label="Mở menu" class="menu-toggle-btn" id="mobileMenuBtn" style="display:none;">
+  <i class="fa-solid fa-bars"></i>
+</button>
+<a class="brand-logo" href="index.html">HUỲNH HOÀNG THỊNH</a>
+<div style="width: 32px;"></div> <!-- spacer for centering logo -->
 </div>
 <nav class="nav-menu-links">
 <a class="nav-link active" data-target="tab-realestate" href="#tabs-section">Real Estate</a>
@@ -37,6 +41,26 @@
 </nav>
 </div>
 </header>
+
+<!-- Mobile Menu Overlay + Drawer -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+<nav class="mobile-menu-drawer" id="mobileMenuDrawer">
+<div class="mobile-menu-header">
+  <span class="mobile-menu-logo">HUỲNH HOÀNG THỊNH</span>
+  <button aria-label="Đóng menu" class="mobile-menu-close" id="mobileMenuClose">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+<div class="mobile-menu-links">
+  <a data-tab="tab-realestate" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-building-columns" style="width:20px;margin-right:8px;"></i>Bất Động Sản</a>
+  <a data-tab="tab-cars" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-car" style="width:20px;margin-right:8px;"></i>Siêu Xe</a>
+  <a data-tab="tab-yachts" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-sailboat" style="width:20px;margin-right:8px;"></i>Du Thuyền</a>
+  <a data-tab="tab-jets" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-plane" style="width:20px;margin-right:8px;"></i>Chuyên Cơ</a>
+  <a data-tab="tab-editorial" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-newspaper" style="width:20px;margin-right:8px;"></i>Tạp Chí</a>
+</div>
+<div class="mobile-menu-footer">© 2026 Huỳnh Hoàng Thịnh Luxury Group</div>
+</nav>
+
 <!-- Hero Section & Auto-Play Audio -->
 <audio autoplay="" id="bgMusic" loop="" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" style="display:none;"></audio>
 <section class="hero-section" id="heroAutoSlider">

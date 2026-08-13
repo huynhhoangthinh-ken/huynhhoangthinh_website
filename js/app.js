@@ -1,3 +1,18 @@
+// ---- MOBILE MENU (prepended) ----
+function closeMobileMenu() {
+  var drawer = document.getElementById('mobileMenuDrawer');
+  var overlay = document.getElementById('mobileMenuOverlay');
+  if (drawer) drawer.classList.remove('open');
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function openMobileMenu() {
+  var drawer = document.getElementById('mobileMenuDrawer');
+  var overlay = document.getElementById('mobileMenuOverlay');
+  if (drawer) drawer.classList.add('open');
+  if (overlay) overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 // Main Application JS
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -163,5 +178,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       })
       .catch(err => console.error("Error fetching posts:", err));
+  }
+});
+
+// ---- MOBILE MENU INIT (added for responsive) ----
+document.addEventListener('DOMContentLoaded', function() {
+  // Show/hide hamburger based on viewport
+  var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  var mobileMenuClose = document.getElementById('mobileMenuClose');
+  var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+  function updateHamburger() {
+    if (mobileMenuBtn) {
+      mobileMenuBtn.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+    }
+  }
+  updateHamburger();
+  window.addEventListener('resize', updateHamburger);
+
+  if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+  if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+  // Mobile drawer links: switch tab + close + scroll
+  document.querySelectorAll('.mobile-menu-links a[data-tab]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var tabId = link.getAttribute('data-tab');
+      if (tabId) {
+        document.querySelectorAll('.tab-btn').forEach(function(btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+        });
+        document.querySelectorAll('.tab-content').forEach(function(tc) {
+          tc.classList.toggle('active', tc.id === tabId);
+        });
+        var tabsSec = document.querySelector('.tabs-section');
+        if (tabsSec) setTimeout(function() { tabsSec.scrollIntoView({behavior: 'smooth'}); }, 280);
+      }
+      closeMobileMenu();
+    });
+  });
+
+  // Sticky header on scroll for desktop
+  var header = document.querySelector('.main-header');
+  window.addEventListener('scroll', function() {
+    if (!header) return;
+    if (window.innerWidth > 768) {
+      if (window.scrollY > 80) {
+        header.style.cssText = 'position:fixed;top:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:12px 0;transition:all 0.3s ease;';
+      } else {
+        header.style.cssText = 'position:absolute;top:38px;background:linear-gradient(180deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);padding:20px 0;';
+      }
+    }
+  });
+
+  // Swipe gesture for hero slider on mobile
+  var hero = document.getElementById('heroAutoSlider');
+  if (hero) {
+    var touchStartX = 0;
+    hero.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, {passive: true});
+    hero.addEventListener('touchend', function(e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        var btn = diff > 0 ? document.getElementById('heroNextBtn') : document.getElementById('heroPrevBtn');
+        if (btn) btn.click();
+      }
+    }, {passive: true});
   }
 });

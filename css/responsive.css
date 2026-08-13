@@ -1,81 +1,297 @@
-/* Responsive Media Queries */
+/* ================================================================
+   RESPONSIVE.CSS — Complete Mobile-First Responsive System
+   Breakpoints:
+   - Mobile:   < 480px
+   - Mobile+:  < 640px
+   - Tablet:   < 768px
+   - Laptop:   < 1024px
+   - Desktop:  >= 1024px
+================================================================ */
 
-@media (max-width: 1024px) {
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .category-card {
-    height: 380px;
-  }
-  
-  .hero-title {
-    font-size: 2.75rem;
-  }
-  
-  .news-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .featured-news-card {
-    height: 380px;
-  }
-  
-  .footer-top-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+/* ---- MOBILE MENU DRAWER ELEMENTS ---- */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: min(320px, 85vw);
+  height: 100vh;
+  background: #0d0d0d;
+  z-index: 950;
+  overflow-y: auto;
+  transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu-drawer.open { left: 0; }
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.mobile-menu-logo {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.mobile-menu-close {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  flex: 1;
+}
+.mobile-menu-links a {
+  display: block;
+  padding: 16px 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.2s, background 0.2s;
+}
+.mobile-menu-links a:hover, .mobile-menu-links a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+.mobile-menu-footer {
+  padding: 20px 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.05em;
 }
 
-@media (max-width: 768px) {
-  .main-header {
-    top: 0;
+/* ================================================================
+   LAPTOP — max-width: 1024px
+================================================================ */
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  .hero-title { font-size: 2.75rem; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .category-card { height: 380px; }
+  .news-grid { grid-template-columns: 1fr; gap: 24px; }
+  .featured-news-card { height: 380px; }
+  .side-news-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
-  
-  .top-bar {
-    display: none;
-  }
-  
-  .nav-menu-links {
-    display: none; /* Can be toggled via mobile menu drawer */
-  }
-  
-  .hero-title {
-    font-size: 2.1rem;
-  }
-  
-  .hero-stats-line {
-    font-size: 0.7rem;
-  }
-  
-  .categories-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .podcast-card-box {
-    flex-direction: column;
-    padding: 32px 24px;
-    text-align: center;
-  }
-  
-  .podcast-left-info {
-    max-width: 100%;
-  }
-  
-  .podcast-right-host {
-    padding-right: 0;
-  }
-  
-  .footer-top-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .side-news-item {
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 0;
+    border-bottom: none;
   }
-  
-  .side-news-thumb {
-    width: 100%;
-    height: 180px;
-  }
+  .side-news-thumb { width: 100%; height: 160px; }
+  .top-listing { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .grid-listing { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .footer-top-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
+
+/* ================================================================
+   TABLET — max-width: 768px
+================================================================ */
+@media (max-width: 768px) {
+  /* Top bar */
+  .top-bar { display: none; }
+
+  /* Header — fixed + frosted glass */
+  .main-header {
+    position: fixed;
+    top: 0;
+    background: rgba(10,10,10,0.93);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 12px 0;
+  }
+  .nav-menu-links { display: none; }
+  .mobile-menu-overlay { display: block; }
+  .brand-logo { font-size: 1.25rem; }
+
+  /* Hero */
+  .hero-section { height: 75vh; min-height: 440px; }
+  .hero-title { font-size: 2rem; max-width: 100%; }
+  .hero-stats-line { font-size: 0.68rem; }
+  .hero-content { padding-bottom: 80px; }
+  .hero-bottom-controls { right: 16px; bottom: 28px; padding: 8px 14px; gap: 12px; }
+
+  /* Section */
+  :root { --section-padding: 48px 0; }
+  .section-title { font-size: 1.6rem; margin-bottom: 20px; }
+  .section-header-flex { flex-wrap: wrap; gap: 12px; }
+
+  /* Categories */
+  .categories-grid { grid-template-columns: 1fr; gap: 12px; }
+  .category-card { height: 260px; }
+
+  /* Trending */
+  .trending-card { width: 210px; }
+  .trending-img-wrapper { height: 148px; }
+
+  /* News */
+  .featured-news-card { height: 320px; }
+  .side-news-list { display: flex; flex-direction: column; gap: 14px; }
+  .side-news-item { flex-direction: row; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); }
+  .side-news-thumb { width: 110px; height: 78px; }
+
+  /* Podcast */
+  .podcast-card-box { flex-direction: column; padding: 24px 20px; text-align: center; gap: 16px; }
+  .podcast-left-info { max-width: 100%; }
+  .podcast-right-host { padding-right: 0; }
+  .podcast-title { font-size: 1.05rem; }
+
+  /* Tabs */
+  .tabs-header { gap: 2px; overflow-x: auto; padding-bottom: 0; }
+  .tab-btn { padding: 12px 14px; font-size: 0.82rem; }
+
+  /* Top listing */
+  .top-listing { grid-template-columns: 1fr; gap: 12px; }
+  .top-listing-card { height: 255px; }
+
+  /* Grid listing — 2 col */
+  .grid-listing { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .grid-card { height: 200px; }
+  .grid-card h5 { font-size: 0.88rem; }
+  .car-price { font-size: 0.76rem !important; }
+
+  /* Footer */
+  .footer-top-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom-bar { flex-direction: column; gap: 10px; text-align: center; }
+
+  /* Zalo */
+  .zalo-floating-btn { width: 52px; height: 52px; bottom: 20px; right: 16px; }
+  .zalo-icon { font-size: 1.5rem; }
+}
+
+/* ================================================================
+   MOBILE — max-width: 480px
+================================================================ */
+@media (max-width: 480px) {
+  .container { padding: 0 14px; }
+
+  /* Hero */
+  .hero-section { height: 68vh; min-height: 360px; }
+  .hero-title { font-size: 1.6rem; line-height: 1.22; }
+  .hero-stats-line { font-size: 0.6rem; }
+  .hero-bottom-controls { display: none; }
+  .hero-content { padding-bottom: 60px; }
+
+  /* Logo */
+  .brand-logo { font-size: 1.05rem; letter-spacing: 0.09em; }
+
+  /* Section */
+  .section-title { font-size: 1.25rem; }
+
+  /* Categories */
+  .category-card { height: 210px; }
+  .category-card-title { font-size: 1.25rem; }
+
+  /* Trending */
+  .trending-card { width: 165px; }
+  .trending-img-wrapper { height: 125px; }
+  .trending-price { font-size: 0.88rem; }
+  .trending-title { font-size: 0.76rem; }
+
+  /* Tabs */
+  .tab-btn { padding: 10px 11px; font-size: 0.76rem; }
+
+  /* Top listing → single */
+  .top-listing-card { height: 220px; }
+  .top-listing-info h4 { font-size: 1.1rem; }
+
+  /* Grid listing → single col */
+  .grid-listing { grid-template-columns: 1fr; gap: 10px; }
+  .grid-card { height: 210px; }
+
+  /* Side news */
+  .side-news-thumb { width: 88px; height: 68px; }
+  .side-news-title { font-size: 0.83rem; }
+  .side-news-excerpt { display: none; }
+
+  /* Sub-tabs */
+  .sub-tabs-header { flex-wrap: wrap; gap: 8px; }
+  .sub-tab-btn { font-size: 0.76rem; padding: 6px 13px; }
+
+  /* Podcast */
+  .podcast-card-box { padding: 18px 14px; }
+  .podcast-desc { font-size: 0.76rem; }
+
+  /* Footer */
+  .footer-bottom-bar { font-size: 0.68rem; }
+
+  /* Zalo */
+  .zalo-floating-btn { width: 46px; height: 46px; bottom: 14px; right: 12px; }
+  .zalo-icon { font-size: 1.25rem; }
+}
+
+/* ================================================================
+   ARTICLE PAGE — article.html specific
+================================================================ */
+@media (max-width: 768px) {
+  .article-header { padding: 100px 0 36px; }
+  .article-title { font-size: 1.75rem !important; }
+  .article-body { font-size: 1rem; }
+  .magazine-quote {
+    font-size: 1.15rem;
+    padding: 20px 18px;
+    margin: 24px auto;
+    max-width: 100%;
+  }
+  .magazine-dropcap::first-letter {
+    font-size: 3rem;
+    padding-right: 8px;
+  }
+  .magazine-figure { margin: 22px 0; }
+}
+@media (max-width: 480px) {
+  .article-title { font-size: 1.4rem !important; line-height: 1.2; }
+  .magazine-quote { font-size: 0.95rem; padding: 14px; }
+  .article-body h2 { font-size: 1.15rem; }
+}
+
+/* ================================================================
+   TOUCH DEVICE — disable hover transforms for performance
+================================================================ */
+@media (hover: none) {
+  .category-card:hover .category-card-bg,
+  .featured-news-card:hover .featured-news-bg,
+  .trending-card:hover .trending-img-wrapper img,
+  .grid-card:hover .grid-img img,
+  .top-listing-card:hover .top-listing-img,
+  .side-news-item:hover .side-news-thumb img { transform: none !important; }
+}
+
+/* ================================================================
+   UTILITIES — Scroll-smooth, scrollbar hide on mobile tab headers
+================================================================ */
+.tabs-header::-webkit-scrollbar { display: none; }
+.tabs-header { -ms-overflow-style: none; scrollbar-width: none; }
