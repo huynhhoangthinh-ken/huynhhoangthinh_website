@@ -133,9 +133,12 @@
     -webkit-backdrop-filter: blur(14px);
     padding: 12px 0;
   }
+  .header-container { gap: 12px; }
   .nav-menu-links { display: none; }
   .mobile-menu-overlay { display: block; }
-  .brand-logo { font-size: 1.25rem; }
+  .brand-avatar-ring { width: 38px; height: 38px; }
+  .brand-logo { font-size: 1.05rem; }
+  .brand-tagline { font-size: 0.52rem; }
 
   /* Hero */
   .hero-section { height: 75vh; min-height: 440px; }
@@ -164,10 +167,10 @@
   .side-news-thumb { width: 110px; height: 78px; }
 
   /* Podcast */
-  .podcast-card-box { flex-direction: column; padding: 24px 20px; text-align: center; gap: 16px; }
-  .podcast-left-info { max-width: 100%; }
-  .podcast-right-host { padding-right: 0; }
-  .podcast-title { font-size: 1.05rem; }
+  .podcast-section-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .podcast-list { grid-template-columns: 1fr; gap: 16px; }
+  .podcast-card-box { padding: 20px; }
+  .podcast-title { font-size: 1.1rem; }
 
   /* Tabs */
   .tabs-header { gap: 2px; overflow-x: auto; padding-bottom: 0; }
@@ -205,8 +208,10 @@
   .hero-bottom-controls { display: none; }
   .hero-content { padding-bottom: 60px; }
 
-  /* Logo */
-  .brand-logo { font-size: 1.05rem; letter-spacing: 0.09em; }
+  /* Logo & Brand */
+  .brand-avatar-ring { width: 34px; height: 34px; }
+  .brand-logo { font-size: 0.92rem; letter-spacing: 0.08em; }
+  .brand-tagline { font-size: 0.48rem; }
 
   /* Section */
   .section-title { font-size: 1.25rem; }

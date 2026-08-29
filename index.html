@@ -33,31 +33,32 @@
 </div>
 <!-- Main Navigation Header -->
 <header class="main-header">
-<div class="container">
-<div class="nav-row-top">
-<!-- Hamburger — visible on mobile only -->
-<button aria-label="Mở menu" class="menu-toggle-btn" id="mobileMenuBtn" style="display:none;">
-  <i class="fa-solid fa-bars"></i>
-</button>
+<div class="container header-container">
+  <!-- Brand Identity: Avatar + Name nằm ngang -->
+  <a class="brand-identity" href="index.html">
+    <div class="brand-avatar-ring">
+      <img src="assets/Index_asset/ceo_thinh.jpg" alt="Huỳnh Hoàng Thịnh" class="brand-avatar-img"/>
+    </div>
+    <div class="brand-text-block">
+      <span class="brand-logo">HUỲNH HOÀNG THỊNH</span>
+      <span class="brand-tagline">Người Giám Tuyển Xa Xỉ</span>
+    </div>
+  </a>
 
-<!-- Brand Identity: Avatar + Name -->
-<a class="brand-identity" href="index.html">
-  <div class="brand-avatar-ring">
-    <img src="assets/ceo_thinh.jpg" alt="Huỳnh Hoàng Thịnh" class="brand-avatar-img"/>
-  </div>
-  <span class="brand-logo">HUỲNH HOÀNG THỊNH</span>
-  <span class="brand-tagline">Người Giám Tuyển Xa Xỉ</span>
-</a>
+  <!-- Navigation Menu Links: Nằm ngang cùng hàng -->
+  <nav class="nav-menu-links">
+    <a class="nav-link active" data-target="tab-realestate" href="#tabs-section">Real Estate</a>
+    <a class="nav-link" data-target="tab-cars-market" href="#tabs-section">Xe Đang Giao Dịch</a>
+    <a class="nav-link" data-target="tab-cars" href="#tabs-section">Siêu Xe</a>
+    <a class="nav-link" data-target="tab-yachts" href="#tabs-section">Yachts</a>
+    <a class="nav-link" data-target="tab-jets" href="#tabs-section">Jets</a>
+    <a class="nav-link" data-target="tab-editorial" href="#tabs-section">Xu Hướng & Nhận Định</a>
+  </nav>
 
-<div style="width: 32px;"></div> <!-- spacer -->
-</div>
-<nav class="nav-menu-links">
-<a class="nav-link active" data-target="tab-realestate" href="#tabs-section">Real Estate</a>
-<a class="nav-link" data-target="tab-cars" href="#tabs-section">Cars</a>
-<a class="nav-link" data-target="tab-yachts" href="#tabs-section">Yachts</a>
-<a class="nav-link" data-target="tab-jets" href="#tabs-section">Jets</a>
-<a class="nav-link" data-target="tab-editorial" href="#tabs-section">Xu Hướng & Nhận Định</a>
-</nav>
+  <!-- Hamburger — visible on mobile only -->
+  <button aria-label="Mở menu" class="menu-toggle-btn" id="mobileMenuBtn" style="display:none;">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 </div>
 </header>
 
@@ -72,6 +73,7 @@
 </div>
 <div class="mobile-menu-links">
   <a data-tab="tab-realestate" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-building-columns" style="width:20px;margin-right:8px;"></i>Bất Động Sản</a>
+  <a data-tab="tab-cars-market" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-car-side" style="width:20px;margin-right:8px;"></i>Xe Đang Giao Dịch</a>
   <a data-tab="tab-cars" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-car" style="width:20px;margin-right:8px;"></i>Siêu Xe</a>
   <a data-tab="tab-yachts" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-sailboat" style="width:20px;margin-right:8px;"></i>Du Thuyền</a>
   <a data-tab="tab-jets" href="#tabs-section" onclick="closeMobileMenu()"><i class="fa-solid fa-plane" style="width:20px;margin-right:8px;"></i>Chuyên Cơ</a>
@@ -80,22 +82,14 @@
 <div class="mobile-menu-footer">© 2026 Huỳnh Hoàng Thịnh Luxury Group</div>
 </nav>
 
-<!-- Hero Section & Auto-Play Audio -->
-<audio autoplay="" id="bgMusic" loop="" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" style="display:none;"></audio>
+<!-- Hero Section -->
 <section class="hero-section" id="heroAutoSlider">
-<div class="hero-slide active" style="background-image: url('assets/hero_villa.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/hero_car2.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/hero_yacht2.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/cat_jets.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/cat_realestate.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/cat_cars.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/cat_yachts.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/news_resort.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/trend_patio.png');"><div class="hero-overlay"></div></div>
-<div class="hero-slide" style="background-image: url('assets/hero_villa.png');"><div class="hero-overlay"></div></div>
+<div class="hero-slide active" style="background-image: url('assets/Index_asset/hero_yacht_16_9.jpg');"><div class="hero-overlay"></div></div>
+<div class="hero-slide" style="background-image: url('assets/Index_asset/hero_villa_16_9.jpg');"><div class="hero-overlay"></div></div>
+<div class="hero-slide" style="background-image: url('assets/Index_asset/hero_car_16_9.jpg');"><div class="hero-overlay"></div></div>
+<div class="hero-slide" style="background-image: url('assets/Index_asset/hero_jet_16_9.jpg');"><div class="hero-overlay"></div></div>
 <div class="container hero-content">
 <h1 class="hero-title">Người Giám Tuyển Xa Xỉ</h1>
-
 </div>
 <!-- Hero Bottom Right Slider Badge -->
 <div class="hero-bottom-controls">
@@ -111,6 +105,7 @@
 <div class="container">
 <div class="tabs-header">
 <button class="tab-btn active" data-tab="tab-realestate">Bất Động Sản Cao Cấp</button>
+<button class="tab-btn" data-tab="tab-cars-market">Xe Đang Giao Dịch <span style="background:#c9a96e;color:#000;font-size:0.6rem;padding:2px 6px;border-radius:10px;margin-left:4px;font-weight:700;">MỞ BÁN</span></button>
 <button class="tab-btn" data-tab="tab-cars">Siêu Xe</button>
 <button class="tab-btn" data-tab="tab-yachts">Du Thuyền & Chuyên Cơ</button>
 <button class="tab-btn" data-tab="tab-editorial">Xu Hướng & Nhận Định</button>
@@ -167,7 +162,141 @@
 </a>
 </div>
 </div>
-<!-- Tab 2: Cars -->
+
+<!-- Tab: Xe Đang Giao Dịch (Luxury Auto Marketplace) -->
+<div class="tab-content" id="tab-cars-market">
+<div class="top-listing">
+  <!-- Featured Car 1: Maserati Grecale GT (HOT DEAL) -->
+  <a class="top-listing-card" href="article.html?id=400" style="text-decoration: none; color: inherit; display: block; position: relative;">
+    <div class="top-listing-img" style="background-image: url('assets/Xe_dang_giao_dich/Grecale/Thumbnail.jpg');"></div>
+    <div style="position: absolute; top: 16px; left: 16px; background: #c9a96e; color: #000; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.05em;">HOT DEAL DUY NHẤT • FULL OPTION</div>
+    <div class="top-listing-info">
+      <h4>Maserati Grecale GT (300 HP)</h4>
+      <p>Mild Hybrid • Xe Cực Chất • 1.999 Tỷ VNĐ</p>
+    </div>
+  </a>
+
+  <!-- Featured Car 2: Land Rover Defender X -->
+  <a class="top-listing-card" href="article.html?id=408" style="text-decoration: none; color: inherit; display: block; position: relative;">
+    <div class="top-listing-img" style="background-image: url('assets/Xe_dang_giao_dich/DefenderX/Thumbnail.jpg');"></div>
+    <div style="position: absolute; top: 16px; left: 16px; background: #2e7d32; color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.05em;">BẢN X ĐỈNH NHẤT • LƯỚT 35.000 KM</div>
+    <div class="top-listing-info">
+      <h4>Land Rover Defender X (400 HP)</h4>
+      <p>Gắn 300Tr Đồ Chơi • Đồ Zin Đủ • 4.390 Tỷ VNĐ</p>
+    </div>
+  </a>
+
+  <!-- Featured Car 3: BMW 735i M Sport G70 -->
+  <a class="top-listing-card" href="article.html?id=407" style="text-decoration: none; color: inherit; display: block; position: relative;">
+    <div class="top-listing-img" style="background-image: url('assets/Xe_dang_giao_dich/BMW/BMW_735_MSP/Thumbnail.jpg');"></div>
+    <div style="position: absolute; top: 16px; left: 16px; background: #0068FF; color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.05em;">SIÊU LƯỚT VIP • M SPORT G70</div>
+    <div class="top-listing-info">
+      <h4>BMW 735i M Sport (All-New G70)</h4>
+      <p>Đèn Pha Lê Swarovski • Interaction Bar • Giá: Liên Hệ</p>
+    </div>
+  </a>
+</div>
+
+<div class="grid-listing">
+  <!-- Item 1: Ferrari 296 GTB -->
+  <a class="grid-card" href="article.html?id=404" style="text-decoration: none; color: inherit; display: block;">
+    <div class="grid-img" style="position: relative;">
+      <img alt="Ferrari 296 GTB" src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1200&q=90"/>
+      <span style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.75); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 3px 8px; border-radius: 3px; backdrop-filter: blur(4px);">ASSETTO FIORANO</span>
+    </div>
+    <div class="grid-card-info">
+      <h5>Ferrari 296 GTB (Hybrid 819 HP)</h5>
+      <div class="car-details">
+        <span class="car-brand">Ferrari</span>
+        <span class="car-year">2023 • Siêu lướt</span>
+      </div>
+      <p class="car-price">Giá: Liên Hệ</p>
+    </div>
+  </a>
+
+  <!-- Item 2: Bentley Flying Spur First Edition -->
+  <a class="grid-card" href="article.html?id=405" style="text-decoration: none; color: inherit; display: block;">
+    <div class="grid-img" style="position: relative;">
+      <img alt="Bentley Flying Spur" src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=90"/>
+      <span style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.75); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 3px 8px; border-radius: 3px; backdrop-filter: blur(4px);">FIRST EDITION</span>
+    </div>
+    <div class="grid-card-info">
+      <h5>Bentley Flying Spur V8</h5>
+      <div class="car-details">
+        <span class="car-brand">Bentley</span>
+        <span class="car-year">2023 • Sang trọng đỉnh cao</span>
+      </div>
+      <p class="car-price">Giá: Liên Hệ</p>
+    </div>
+  </a>
+
+  <!-- Item 3: Range Rover SV 4 Chỗ -->
+  <a class="grid-card" href="article.html?id=406" style="text-decoration: none; color: inherit; display: block;">
+    <div class="grid-img" style="position: relative;">
+      <img alt="Range Rover SV" src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=90"/>
+      <span style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.75); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 3px 8px; border-radius: 3px; backdrop-filter: blur(4px);">4 CHỖ THƯƠNG GIA</span>
+    </div>
+    <div class="grid-card-info">
+      <h5>Range Rover SV LWB (V8 523 HP)</h5>
+      <div class="car-details">
+        <span class="car-brand">Land Rover</span>
+        <span class="car-year">2024 • Bản 4 chỗ VIP</span>
+      </div>
+      <p class="car-price">Giá: Liên Hệ</p>
+    </div>
+  </a>
+
+  <!-- Item 4: Lamborghini Revuelto -->
+  <a class="grid-card" href="article.html?id=110" style="text-decoration: none; color: inherit; display: block;">
+    <div class="grid-img" style="position: relative;">
+      <img alt="Lamborghini Revuelto" src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=90"/>
+      <span style="position: absolute; top: 10px; left: 10px; background: #c9a96e; color: #000; font-size: 0.65rem; font-weight: 700; padding: 3px 8px; border-radius: 3px;">ORDER SUẤT SỚM</span>
+    </div>
+    <div class="grid-card-info">
+      <h5>Lamborghini Revuelto V12 HPEV</h5>
+      <div class="car-details">
+        <span class="car-brand">Lamborghini</span>
+        <span class="car-year">2024 • 1,001 HP</span>
+      </div>
+      <p class="car-price">Liên hệ CEO Thịnh</p>
+    </div>
+  </a>
+
+  <!-- Item 5: Rolls-Royce Spectre -->
+  <a class="grid-card" href="article.html?id=111" style="text-decoration: none; color: inherit; display: block;">
+    <div class="grid-img" style="position: relative;">
+      <img alt="Rolls-Royce Spectre" src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=1200&q=90"/>
+      <span style="position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.75); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 3px 8px; border-radius: 3px; backdrop-filter: blur(4px);">COUPE ĐIỆN SIÊU SANG</span>
+    </div>
+    <div class="grid-card-info">
+      <h5>Rolls-Royce Spectre 2025</h5>
+      <div class="car-details">
+        <span class="car-brand">Rolls-Royce</span>
+        <span class="car-year">2025 • Độc Bản</span>
+      </div>
+      <p class="car-price">Liên hệ CEO Thịnh</p>
+    </div>
+  </a>
+
+  <!-- Item 6: Aston Martin Valkyrie -->
+  <a class="grid-card" href="article.html?id=114" style="text-decoration: none; color: inherit; display: block;">
+    <div class="grid-img" style="position: relative;">
+      <img alt="Aston Martin Valkyrie" src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=90"/>
+      <span style="position: absolute; top: 10px; left: 10px; background: #d4af37; color: #000; font-size: 0.65rem; font-weight: 700; padding: 3px 8px; border-radius: 3px;">HYPERCAR ĐỘC BẢN</span>
+    </div>
+    <div class="grid-card-info">
+      <h5>Aston Martin Valkyrie</h5>
+      <div class="car-details">
+        <span class="car-brand">Aston Martin</span>
+        <span class="car-year">2023 • Động Cơ F1</span>
+      </div>
+      <p class="car-price">Liên hệ CEO Thịnh</p>
+    </div>
+  </a>
+</div>
+</div>
+
+<!-- Tab: Siêu Xe Độc Bản -->
 <div class="tab-content" id="tab-cars">
 <div class="top-listing">
 <a class="top-listing-card" href="article.html?id=107" style=" text-decoration: none; color: inherit; display: block;">
@@ -448,7 +577,7 @@
 <div class="news-grid">
 <!-- Left Featured Article: Louis Vuitton x Singer Porsche 911 (ID 202) -->
 <a class="featured-news-card" href="article.html?id=202">
-<div class="featured-news-bg" style="background-image: url('assets/lv_singer_turbo_front.jpg');"></div>
+<div class="featured-news-bg" style="background-image: url('assets/Index_asset/lv_singer_turbo_front.jpg');"></div>
 <div class="featured-news-overlay"></div>
 <span class="news-date-badge">14 TH8 2026 • TIN MỚI NHẤT</span>
 <h3 class="featured-news-title">Louis Vuitton Đưa Nghệ Thuật Du Hành Lên Porsche 911: 02 Tuyệt Tác Bespoke Hơn 2.5 Triệu Bảng</h3>
@@ -496,63 +625,90 @@
 <!-- Podcast Section -->
 <section class="podcast-section">
 <div class="container">
+<div class="podcast-section-header">
+  <div>
+    <h2 class="section-title">Chuỗi Podcast Tinh Hoa</h2>
+  </div>
+  <span class="podcast-section-subtitle">Góc nhìn chuyên sâu cùng Host Huỳnh Hoàng Thịnh</span>
+</div>
 <div class="podcast-list">
   
   <!-- Episode 1 -->
   <div class="podcast-card-box">
-  <div class="podcast-left-info">
-  <h2 class="podcast-title">#01: Bất Động Sản Siêu Sang</h2>
-  <p class="podcast-desc">Khám phá thế giới bất động sản cao cấp với các cuộc trò chuyện cùng chuyên gia.</p>
-  <button class="podcast-cta-btn podcast-listen-btn" data-ep-title="Episode #01: Bất Động Sản Siêu Sang" data-ep-desc="Xu hướng đầu tư Bất động sản Cao cấp 2026 với Host Huỳnh Hoàng Thịnh" data-audio-src="assets/podcast_ep1.mp3">
-              NGHE NGAY <i class="fa-solid fa-arrow-right"></i>
-  </button>
-  </div>
-  <div class="podcast-right-host">
-  <div class="host-avatar-wrapper">
-  <img alt="Host Huỳnh Hoàng Thịnh" src="assets/ceo_thinh.jpg"/>
-  </div>
-  <span class="host-tag">HOST CỦA BẠN</span>
-  <div class="host-name">Huỳnh Hoàng Thịnh</div>
-  <div class="host-role">CEO</div>
-  </div>
+    <div class="podcast-card-top">
+      <div class="podcast-host-info">
+        <div class="host-avatar-wrapper">
+          <img alt="Host Huỳnh Hoàng Thịnh" src="assets/Index_asset/ceo_thinh.jpg"/>
+        </div>
+        <div class="host-meta">
+          <span class="host-tag">HOST</span>
+          <span class="host-name">Huỳnh Hoàng Thịnh</span>
+        </div>
+      </div>
+      <span class="podcast-ep-badge">EPISODE #01</span>
+    </div>
+    <div class="podcast-mid-body">
+      <h3 class="podcast-title">Bất Động Sản Siêu Sang</h3>
+      <p class="podcast-desc">Khám phá thế giới BĐS cao cấp và xu hướng dòng tiền của giới tinh hoa 2026.</p>
+    </div>
+    <div class="podcast-card-bottom">
+      <button class="podcast-cta-btn podcast-listen-btn" data-ep-title="Episode #01: Bất Động Sản Siêu Sang" data-ep-desc="Xu hướng đầu tư Bất động sản Cao cấp 2026 với Host Huỳnh Hoàng Thịnh" data-audio-src="assets/Index_asset/podcast_ep1.mp3">
+        <i class="fa-solid fa-play" style="font-size: 0.65rem;"></i> NGHE NGAY
+      </button>
+      <span class="podcast-duration"><i class="fa-solid fa-headphones"></i> Audio</span>
+    </div>
   </div>
 
   <!-- Episode 2 -->
   <div class="podcast-card-box">
-  <div class="podcast-left-info">
-  <h2 class="podcast-title">#02: Siêu Xe & Đam Mê Tốc Độ</h2>
-  <p class="podcast-desc">Sự trỗi dậy của thị trường Hypercar và giá trị sưu tầm vượt thời gian.</p>
-  <button class="podcast-cta-btn podcast-listen-btn" data-ep-title="Episode #02: Siêu Xe & Đam Mê Tốc Độ" data-ep-desc="Hypercar và giá trị sưu tầm vượt thời gian với Host Huỳnh Hoàng Thịnh" data-audio-src="assets/podcast_ep2.mp3">
-              NGHE NGAY <i class="fa-solid fa-arrow-right"></i>
-  </button>
-  </div>
-  <div class="podcast-right-host">
-  <div class="host-avatar-wrapper">
-  <img alt="Host Huỳnh Hoàng Thịnh" src="assets/ceo_thinh.jpg"/>
-  </div>
-  <span class="host-tag">HOST CỦA BẠN</span>
-  <div class="host-name">Huỳnh Hoàng Thịnh</div>
-  <div class="host-role">CEO</div>
-  </div>
+    <div class="podcast-card-top">
+      <div class="podcast-host-info">
+        <div class="host-avatar-wrapper">
+          <img alt="Host Huỳnh Hoàng Thịnh" src="assets/Index_asset/ceo_thinh.jpg"/>
+        </div>
+        <div class="host-meta">
+          <span class="host-tag">HOST</span>
+          <span class="host-name">Huỳnh Hoàng Thịnh</span>
+        </div>
+      </div>
+      <span class="podcast-ep-badge">EPISODE #02</span>
+    </div>
+    <div class="podcast-mid-body">
+      <h3 class="podcast-title">Siêu Xe & Đam Mê Tốc Độ</h3>
+      <p class="podcast-desc">Sự trỗi dậy của thị trường Hypercar và giá trị sưu tầm độc bản vượt thời gian.</p>
+    </div>
+    <div class="podcast-card-bottom">
+      <button class="podcast-cta-btn podcast-listen-btn" data-ep-title="Episode #02: Siêu Xe & Đam Mê Tốc Độ" data-ep-desc="Hypercar và giá trị sưu tầm vượt thời gian với Host Huỳnh Hoàng Thịnh" data-audio-src="assets/Index_asset/podcast_ep2.mp3">
+        <i class="fa-solid fa-play" style="font-size: 0.65rem;"></i> NGHE NGAY
+      </button>
+      <span class="podcast-duration"><i class="fa-solid fa-headphones"></i> Audio</span>
+    </div>
   </div>
 
   <!-- Episode 3 -->
   <div class="podcast-card-box">
-  <div class="podcast-left-info">
-  <h2 class="podcast-title">#03: Du Thuyền & Chuyên Cơ</h2>
-  <p class="podcast-desc">Trải nghiệm nghỉ dưỡng chuyển động trên biển và đặc quyền hàng không cá nhân hóa.</p>
-  <button class="podcast-cta-btn podcast-listen-btn" data-ep-title="Episode #03: Du Thuyền & Chuyên Cơ" data-ep-desc="Đặc quyền di chuyển của giới siêu giàu với Host Huỳnh Hoàng Thịnh" data-audio-src="assets/podcast_ep3.mp3">
-              NGHE NGAY <i class="fa-solid fa-arrow-right"></i>
-  </button>
-  </div>
-  <div class="podcast-right-host">
-  <div class="host-avatar-wrapper">
-  <img alt="Host Huỳnh Hoàng Thịnh" src="assets/ceo_thinh.jpg"/>
-  </div>
-  <span class="host-tag">HOST CỦA BẠN</span>
-  <div class="host-name">Huỳnh Hoàng Thịnh</div>
-  <div class="host-role">CEO</div>
-  </div>
+    <div class="podcast-card-top">
+      <div class="podcast-host-info">
+        <div class="host-avatar-wrapper">
+          <img alt="Host Huỳnh Hoàng Thịnh" src="assets/Index_asset/ceo_thinh.jpg"/>
+        </div>
+        <div class="host-meta">
+          <span class="host-tag">HOST</span>
+          <span class="host-name">Huỳnh Hoàng Thịnh</span>
+        </div>
+      </div>
+      <span class="podcast-ep-badge">EPISODE #03</span>
+    </div>
+    <div class="podcast-mid-body">
+      <h3 class="podcast-title">Du Thuyền & Chuyên Cơ</h3>
+      <p class="podcast-desc">Trải nghiệm nghỉ dưỡng trên biển và đặc quyền hàng không cá nhân hóa.</p>
+    </div>
+    <div class="podcast-card-bottom">
+      <button class="podcast-cta-btn podcast-listen-btn" data-ep-title="Episode #03: Du Thuyền & Chuyên Cơ" data-ep-desc="Đặc quyền di chuyển của giới siêu giàu với Host Huỳnh Hoàng Thịnh" data-audio-src="assets/Index_asset/podcast_ep3.mp3">
+        <i class="fa-solid fa-play" style="font-size: 0.65rem;"></i> NGHE NGAY
+      </button>
+      <span class="podcast-duration"><i class="fa-solid fa-headphones"></i> Audio</span>
+    </div>
   </div>
 
 </div>
@@ -572,9 +728,9 @@
 <h4 class="footer-col-heading">Danh mục</h4>
 <ul class="footer-links-list">
 <li><a href="#tabs-section" onclick="activateTab('tab-realestate')">Bất động sản</a></li>
-<li><a href="#tabs-section" onclick="activateTab('tab-cars')">Ô tô</a></li>
-<li><a href="#tabs-section" onclick="activateTab('tab-yachts')">Du thuyền</a></li>
-<li><a href="#tabs-section" onclick="activateTab('tab-yachts')">Máy bay</a></li>
+<li><a href="#tabs-section" onclick="activateTab('tab-cars-market')">Xe đang giao dịch</a></li>
+<li><a href="#tabs-section" onclick="activateTab('tab-cars')">Siêu xe độc bản</a></li>
+<li><a href="#tabs-section" onclick="activateTab('tab-yachts')">Du thuyền & Chuyên cơ</a></li>
 </ul>
 </div>
 <div>
@@ -614,7 +770,7 @@
       </p>
 <div class="audio-player-wrapper">
 <audio controls="" id="podcastAudio">
-<source src="assets/podcast_ep1.mp3" type="audio/mpeg" id="podcastAudioSource"/>
+<source src="assets/Index_asset/podcast_ep1.mp3" type="audio/mpeg" id="podcastAudioSource"/>
           Browser của bạn không hỗ trợ audio element.
         </audio>
 </div>

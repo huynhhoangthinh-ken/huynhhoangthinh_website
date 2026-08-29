@@ -76,16 +76,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+// Global Tab Activation Function
+window.activateTab = function(tabId) {
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  tabBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-tab') === tabId));
+  tabContents.forEach(c => c.classList.toggle('active', c.id === tabId));
+  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('data-target') === tabId));
+
+  const tabsSection = document.querySelector('.tabs-section');
+  if (tabsSection) {
+    tabsSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
   // Hero Auto Slider Logic
   const heroSlides = document.querySelectorAll('#heroAutoSlider .hero-slide');
+  const heroPrevBtn = document.getElementById('heroPrevBtn');
+  const heroNextBtn = document.getElementById('heroNextBtn');
   let currentHeroIdx = 0;
+  let heroTimer = null;
+
+  function showHeroSlide(index) {
+    if (heroSlides.length === 0) return;
+    heroSlides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === index);
+    });
+    currentHeroIdx = index;
+  }
+
+  function nextHeroSlide() {
+    let nextIdx = (currentHeroIdx + 1) % heroSlides.length;
+    showHeroSlide(nextIdx);
+  }
+
+  function prevHeroSlide() {
+    let prevIdx = (currentHeroIdx - 1 + heroSlides.length) % heroSlides.length;
+    showHeroSlide(prevIdx);
+  }
+
+  function resetHeroTimer() {
+    if (heroTimer) clearInterval(heroTimer);
+    if (heroSlides.length > 0) {
+      heroTimer = setInterval(nextHeroSlide, 8000);
+    }
+  }
 
   if (heroSlides.length > 0) {
-    setInterval(() => {
-      heroSlides[currentHeroIdx].classList.remove('active');
-      currentHeroIdx = (currentHeroIdx + 1) % heroSlides.length;
-      heroSlides[currentHeroIdx].classList.add('active');
-    }, 10000); // 10 seconds
+    resetHeroTimer();
+  }
+
+  if (heroNextBtn) {
+    heroNextBtn.addEventListener('click', () => {
+      nextHeroSlide();
+      resetHeroTimer();
+    });
+  }
+
+  if (heroPrevBtn) {
+    heroPrevBtn.addEventListener('click', () => {
+      prevHeroSlide();
+      resetHeroTimer();
+    });
   }
 
   // Tabs Switching Logic

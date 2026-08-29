@@ -121,27 +121,29 @@
 
   <!-- Main Navigation Header (Dark Version for inner pages) -->
   <header class="main-header" style="position: fixed; top: 0; background: rgba(10,10,10,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);">
-    <div class="container">
-      <div class="nav-row-top">
-        <button class="menu-toggle-btn" id="mobileMenuBtn" aria-label="Mở menu" style="display:none;">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <a class="brand-identity" href="index.html">
+    <div class="container header-container">
+      <a class="brand-identity" href="index.html">
         <div class="brand-avatar-ring">
-          <img src="assets/ceo_thinh.jpg" alt="Huỳnh Hoàng Thịnh" class="brand-avatar-img"/>
+          <img src="assets/Index_asset/ceo_thinh.jpg" alt="Huỳnh Hoàng Thịnh" class="brand-avatar-img"/>
         </div>
-        <span class="brand-logo">HUỲNH HOÀNG THỊNH</span>
-        <span class="brand-tagline">Người Giám Tuyển Xa Xỉ</span>
+        <div class="brand-text-block">
+          <span class="brand-logo">HUỲNH HOÀNG THỊNH</span>
+          <span class="brand-tagline">Người Giám Tuyển Xa Xỉ</span>
+        </div>
       </a>
-        <div style="width: 32px;"></div>
-      </div>
+
       <nav class="nav-menu-links">
         <a href="index.html">Trang Chủ</a>
-        <a href="index.html">Bất Động Sản</a>
-        <a href="index.html">Siêu Xe</a>
-        <a href="index.html">Du Thuyền</a>
-        <a href="index.html" class="active">Tạp chí</a>
+        <a href="index.html#tab-realestate">Bất Động Sản</a>
+        <a href="index.html#tab-cars-market">Xe Đang Giao Dịch</a>
+        <a href="index.html#tab-cars">Siêu Xe</a>
+        <a href="index.html#tab-yachts">Du Thuyền</a>
+        <a href="index.html#tab-editorial" class="active">Tạp chí</a>
       </nav>
+
+      <button class="menu-toggle-btn" id="mobileMenuBtn" aria-label="Mở menu" style="display:none;">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </header>
 
@@ -156,10 +158,11 @@
     </div>
     <div class="mobile-menu-links">
       <a href="index.html"><i class="fa-solid fa-house" style="width:20px;margin-right:8px;"></i>Trang Chủ</a>
-      <a href="index.html"><i class="fa-solid fa-building-columns" style="width:20px;margin-right:8px;"></i>Bất Động Sản</a>
-      <a href="index.html"><i class="fa-solid fa-car" style="width:20px;margin-right:8px;"></i>Siêu Xe</a>
-      <a href="index.html"><i class="fa-solid fa-sailboat" style="width:20px;margin-right:8px;"></i>Du Thuyền</a>
-      <a href="index.html" class="active"><i class="fa-solid fa-newspaper" style="width:20px;margin-right:8px;"></i>Tạp Chí</a>
+      <a href="index.html#tab-realestate"><i class="fa-solid fa-building-columns" style="width:20px;margin-right:8px;"></i>Bất Động Sản</a>
+      <a href="index.html#tab-cars-market"><i class="fa-solid fa-car-side" style="width:20px;margin-right:8px;"></i>Xe Đang Giao Dịch</a>
+      <a href="index.html#tab-cars"><i class="fa-solid fa-car" style="width:20px;margin-right:8px;"></i>Siêu Xe</a>
+      <a href="index.html#tab-yachts"><i class="fa-solid fa-sailboat" style="width:20px;margin-right:8px;"></i>Du Thuyền</a>
+      <a href="index.html#tab-editorial" class="active"><i class="fa-solid fa-newspaper" style="width:20px;margin-right:8px;"></i>Tạp Chí</a>
     </div>
     <div class="mobile-menu-footer">© 2026 Huỳnh Hoàng Thịnh Luxury Group</div>
   </nav>
@@ -184,7 +187,8 @@
           <h4 class="footer-col-heading">Danh mục</h4>
           <ul class="footer-links-list">
             <li><a href="index.html#tab-realestate">Bất động sản</a></li>
-            <li><a href="index.html#tab-cars">Ô tô</a></li>
+            <li><a href="index.html#tab-cars-market">Xe đang giao dịch</a></li>
+            <li><a href="index.html#tab-cars">Siêu xe độc bản</a></li>
             <li><a href="index.html#tab-yachts">Du thuyền & Chuyên cơ</a></li>
           </ul>
         </div>
@@ -192,8 +196,8 @@
         <div>
           <h4 class="footer-col-heading">Công ty</h4>
           <ul class="footer-links-list">
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="article.html?id=301">Giới thiệu</a></li>
+            <li><a href="article.html?id=304">Liên hệ</a></li>
           </ul>
         </div>
       </div>
