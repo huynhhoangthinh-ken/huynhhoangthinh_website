@@ -285,7 +285,7 @@
             container.innerHTML = `
               <div class="article-header">
                 <div class="container">
-                  <div class="article-meta">${post.date} &bull; TẠP CHÍ & GÓC NHÌN</div>
+                  <div class="article-meta">${post.date} &bull; <span style="color: #c9a96e; font-weight: 700; letter-spacing: 0.05em;">${post.category_label || 'TẠP CHÍ XA XỈ'}</span></div>
                   <h1 class="article-title">${post.title}</h1>
                 </div>
               </div>

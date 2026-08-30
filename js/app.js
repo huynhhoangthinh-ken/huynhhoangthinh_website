@@ -208,20 +208,29 @@ window.activateTab = function(tabId) {
   const filterBtns = document.querySelectorAll('.editorial-filter-btn');
 
   function getPostCategory(post) {
+    if (post.category) return post.category;
     const id = post.id;
     const title = (post.title || '').toLowerCase();
     
-    if ((id >= 501 && id <= 530) || (id >= 101 && id <= 106) || [1, 4, 6, 9, 12, 15, 18, 19].includes(id) || title.includes('bất động sản') || title.includes('villa') || title.includes('dinh thự') || title.includes('penthouse') || title.includes('kiến trúc') || title.includes('hồ bơi') || title.includes('nội thất')) {
+    // 1. Real Estate Projects & Architecture
+    if ((id >= 601 && id <= 610) || (id >= 501 && id <= 530) || [1, 4, 6, 9, 12, 15, 18, 19].includes(id) || title.includes('saigon farm') || title.includes('marq') || title.includes('global city') || title.includes('rivus') || title.includes('blanca') || title.includes('urban green') || title.includes('gladia') || title.includes('sola') || title.includes('bất động sản') || title.includes('villa') || title.includes('dinh thự') || title.includes('penthouse') || title.includes('điền trang') || title.includes('điền sản') || title.includes('điền an')) {
       return 'bds';
     }
-    if ((id >= 601 && id <= 608) || (id >= 400 && id <= 415) || (id >= 107 && id <= 119) || [3, 7, 11, 14, 16, 202].includes(id) || title.includes('siêu xe') || title.includes('ferrari') || title.includes('porsche') || title.includes('bugatti') || title.includes('mclaren') || title.includes('koenigsegg') || title.includes('pagani') || title.includes('aston martin') || title.includes('lamborghini') || title.includes('bmw') || title.includes('mercedes') || title.includes('maserati') || title.includes('bentley') || title.includes('defender')) {
+    // 2. Supercars & Hypercars
+    if ((id >= 107 && id <= 119) || [200, 201, 202, 3, 7, 11, 14, 16].includes(id) || title.includes('siêu xe') || title.includes('hypercar') || title.includes('ferrari') || title.includes('porsche') || title.includes('bugatti') || title.includes('mclaren') || title.includes('koenigsegg') || title.includes('pagani') || title.includes('aston martin') || title.includes('lamborghini') || title.includes('bentley') || title.includes('rolls-royce')) {
       return 'supercar';
     }
-    if ((id >= 609 && id <= 617) || (id >= 120 && id <= 131) || [2, 5, 8, 10, 13, 17, 20].includes(id) || title.includes('du thuyền') || title.includes('chuyên cơ') || title.includes('gulfstream') || title.includes('bombardier') || title.includes('falcon') || title.includes('lürssen') || title.includes('sanlorenzo') || title.includes('benetti') || title.includes('riva') || title.includes('sunseeker') || title.includes('trực thăng') || title.includes('airbus') || title.includes('yacht') || title.includes('jet')) {
+    // 3. Yachts & Private Jets
+    if ((id >= 611 && id <= 617) || (id >= 120 && id <= 131) || [2, 5, 8, 10, 13, 17, 20].includes(id) || title.includes('du thuyền') || title.includes('chuyên cơ') || title.includes('gulfstream') || title.includes('bombardier') || title.includes('falcon') || title.includes('lürssen') || title.includes('sanlorenzo') || title.includes('benetti') || title.includes('riva') || title.includes('sunseeker') || title.includes('airbus') || title.includes('yacht') || title.includes('jet')) {
       return 'yacht-jet';
     }
-    if ((id >= 618 && id <= 620) || (id >= 301 && id <= 304) || title.includes('patek') || title.includes('audemars') || title.includes('hermès') || title.includes('đồng hồ') || title.includes('hàng hiệu') || title.includes('xa xỉ') || title.includes('quiet luxury') || title.includes('thương hiệu')) {
+    // 4. Watches & Luxury Brands
+    if ((id >= 618 && id <= 620) || (id >= 301 && id <= 304) || title.includes('patek') || title.includes('nautilus') || title.includes('grandmaster chime') || title.includes('đồng hồ') || title.includes('hermès') || title.includes('quiet luxury')) {
       return 'luxury';
+    }
+    // 5. Market Cars
+    if ((id >= 401 && id <= 415) || (id >= 101 && id <= 106)) {
+      return 'market-cars';
     }
     return 'bds';
   }
@@ -232,6 +241,7 @@ window.activateTab = function(tabId) {
       case 'supercar': return 'SIÊU XE & HYPERCAR';
       case 'yacht-jet': return 'DU THUYỀN & CHUYÊN CƠ';
       case 'luxury': return 'ĐỒNG HỒ & HÀNG HIỆU';
+      case 'market-cars': return 'XE ĐANG GIAO DỊCH';
       default: return 'TẠP CHÍ XA XỈ';
     }
   }
