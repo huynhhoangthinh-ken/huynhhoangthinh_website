@@ -14,7 +14,7 @@
   const LUXURY_KNOWLEDGE = {
     supercars: [
       { id: 107, name: 'Koenigsegg Jesko', price: '3,000,000 USD', desc: '1.600 mã lực, tốc độ tối đa lý thuyết 531 km/h - "Thần gió" Thụy Điển', img: 'assets/Posts/Koenigsegg_Jesko_2026/Koenigsegg_Jesko_20261_thumbnail.webp' },
-      { id: 108, name: 'Bugatti Chiron', price: '3,900,000 USD', desc: 'Động cơ W16 8.0L 4 Turbo, 1.500 mã lực - Ông hoàng tốc độ', img: 'assets/vehicles/bugatti_chiron.jpg' },
+      { id: 108, name: 'Bugatti Tourbillon (2026)', price: '4,100,000 USD', desc: 'Động cơ V16 Hybrid 1.800 mã lực, cụm đồng hồ cơ học Thụy Sĩ đỉnh cao', img: 'assets/Posts/Bugatti_tourbillon_2026/Bugatti Tourbillon (2026)1.jpg' },
       { id: 109, name: 'Ferrari LaFerrari', price: '2,500,000 USD', desc: 'Hypercar Hybrid V12 kiệt tác từ Maranello', img: 'assets/vehicles/ferrari_laferrari.jpg' },
       { id: 110, name: 'Lamborghini Revuelto', price: '600,000 USD', desc: 'Siêu bò V12 Hybrid thế hệ mới nhất 1.015 HP', img: 'assets/vehicles/lamborghini_revuelto.jpg' },
       { id: 111, name: 'Rolls-Royce Spectre', price: '450,000 USD', desc: 'Siêu sang thuần điện đầu tiên trong lịch sử Rolls-Royce', img: 'assets/vehicles/rolls_royce_spectre.jpg' },
