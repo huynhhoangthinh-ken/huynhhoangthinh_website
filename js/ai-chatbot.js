@@ -28,10 +28,10 @@
     ],
     yachts: [
       { id: 122, name: 'Feadship 821 (Viva)', price: '350,000,000 USD', desc: 'Siêu du thuyền 119m chạy bằng Hydrogen đầu tiên thế giới', img: 'assets/vehicles/feadship_821.jpg' },
-      { id: 120, name: 'Oceanco Bravo Eugenia', price: '250,000,000 USD', desc: 'Mega Yacht 109m sinh thái, rạp chiếu phim & bãi đỗ trực thăng', img: 'assets/vehicles/oceanco_yacht.jpg' },
-      { id: 121, name: 'Lürssen Ahpo', price: '330,000,000 USD', desc: 'Cung điện nổi 115m xa hoa bậc nhất thế giới', img: 'assets/vehicles/lurssen_ahpo.jpg' },
+      { id: 120, name: 'Oceanco Bravo Eugenia', price: '250,000,000 USD', desc: 'Mega Yacht 109m sinh thái, rạp chiếu phim & bãi đỗ trực thăng', img: 'assets/Posts/Oceanco_Project_2026/Oceanco_Project_2026_00001.webp' },
+      { id: 121, name: 'Lürssen Ahpo', price: '330,000,000 USD', desc: 'Cung điện nổi 115m xa hoa bậc nhất thế giới', img: 'assets/Posts/Lurssen_Ahpo/76393b30-0096-11ed-aed3-f71d7c568098-AHPO-hero-Photography-guillaume-plisson.avif' },
       { id: 127, name: 'Sunseeker Ocean 182', price: '8,500,000 USD', desc: 'Du thuyền động cơ Anh Quốc với Enclosed Flybridge', img: 'assets/vehicles/sunseeker_ocean_182.jpg' },
-      { id: 128, name: 'Riva 130 Bellissima', price: '22,000,000 USD', desc: 'Flybridge 40m nghệ thuật thủ công tinh hoa từ Ý', img: 'assets/vehicles/riva_130_bellissima.jpg' }
+      { id: 128, name: 'Riva 130 Bellissima', price: '22,000,000 USD', desc: 'Flybridge 40m nghệ thuật thủ công tinh hoa từ Ý', img: 'assets/Posts/Riva_130_Bellissima_2026/Riva_130_Bellissima_2026_00001.webp' }
     ],
     jets: [
       { id: 123, name: 'Gulfstream G700', price: '78,000,000 USD', desc: 'Chuyên cơ tốc độ Mach 0.925, tầm bay 7.500 hải lý', img: 'assets/vehicles/gulfstream_g700.jpg' },

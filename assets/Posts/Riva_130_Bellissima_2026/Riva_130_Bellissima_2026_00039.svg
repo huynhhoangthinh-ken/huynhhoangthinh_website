@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1920 1080">
+  <!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Sfumatura_senza_nome_81);
+        opacity: .57;
+      }
+
+      .st0, .st1, .st2 {
+        isolation: isolate;
+      }
+
+      .st0, .st2 {
+        mix-blend-mode: multiply;
+      }
+
+      .st2 {
+        fill: url(#Sfumatura_senza_nome_8);
+        opacity: .87;
+      }
+    </style>
+    <linearGradient id="Sfumatura_senza_nome_8" data-name="Sfumatura senza nome 8" x1="1.22" y1="1081.67" x2="1.22" y2="1080.67" gradientTransform="translate(-1380 395523.5) scale(1920 -365)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".28" stop-color="#010406" stop-opacity=".14"/>
+      <stop offset=".67" stop-color="#051117" stop-opacity=".54"/>
+      <stop offset="1" stop-color="#0a212c"/>
+    </linearGradient>
+    <linearGradient id="Sfumatura_senza_nome_81" data-name="Sfumatura senza nome 8" x1="1.78" y1="1080" x2="1.78" y2="1079" gradientTransform="translate(4380 -262196.5) rotate(-180) scale(1920 -243)" xlink:href="#Sfumatura_senza_nome_8"/>
+  </defs>
+  <g class="st1">
+    <g id="Livello_1">
+      <rect id="Rettangolo_99" class="st2" x="0" y="715" width="1920" height="365"/>
+      <rect id="Rettangolo_114" class="st0" x="0" width="1920" height="243"/>
+    </g>
+  </g>
+</svg>
