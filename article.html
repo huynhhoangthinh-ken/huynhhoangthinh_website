@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/chatbot.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
@@ -128,7 +129,7 @@
         </div>
         <div class="brand-text-block">
           <span class="brand-logo">HUỲNH HOÀNG THỊNH</span>
-          <span class="brand-tagline">Người Giám Tuyển Xa Xỉ</span>
+          <span class="brand-tagline">NGƯỜI GIÁM TUYỂN XA XỈ</span>
         </div>
       </a>
 
@@ -141,7 +142,7 @@
         <a href="index.html#tab-editorial" class="active">Tạp chí</a>
       </nav>
 
-      <button class="menu-toggle-btn" id="mobileMenuBtn" aria-label="Mở menu" style="display:none;">
+      <button class="menu-toggle-btn" id="mobileMenuBtn" aria-label="Mở menu">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
@@ -171,6 +172,55 @@
     <!-- Article content will be rendered here by JS -->
     <div style="text-align: center; padding: 100px;">Đang tải bài viết...</div>
   </main>
+
+  <!-- Related Editorial Section -->
+  <section class="news-section" style="border-top: 1px solid #f0f0f0; padding-top: 40px;">
+    <div class="container">
+      <div class="editorial-latest-block">
+        <h3 class="editorial-latest-heading">Góc Nhìn & Xu Hướng Khác</h3>
+        <div class="editorial-row-list">
+          <a class="editorial-row-item" href="article.html?id=1">
+            <div class="row-item-thumb">
+              <img alt="Villa trung tâm TP.HCM" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800"/>
+            </div>
+            <div class="row-item-body">
+              <span class="row-item-cat">NHẬN ĐỊNH THỊ TRƯỜNG</span>
+              <h4 class="row-item-title">Villa trung tâm TP. Hồ Chí Minh: xu hướng đầu tư bất động sản siêu sang</h4>
+            </div>
+            <div class="row-item-action">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <a class="editorial-row-item" href="article.html?id=601">
+            <div class="row-item-thumb">
+              <img alt="Saigon Farm Resort" src="assets/Saigon_Farm_Resort/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg"/>
+            </div>
+            <div class="row-item-body">
+              <span class="row-item-cat">PHONG CÁCH SỐNG</span>
+              <h4 class="row-item-title">Những bất động sản định hình gu sống mới</h4>
+            </div>
+            <div class="row-item-action">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <a class="editorial-row-item" href="article.html?id=202">
+            <div class="row-item-thumb">
+              <img alt="Louis Vuitton x Singer Porsche 911" src="assets/Index_asset/lv_singer_turbo_front.jpg"/>
+            </div>
+            <div class="row-item-body">
+              <span class="row-item-cat">NGHỆ THUẬT CHẾ TÁC</span>
+              <h4 class="row-item-title">Louis Vuitton đưa nghệ thuật du hành lên Porsche 911</h4>
+            </div>
+            <div class="row-item-action">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Site Footer -->
   <footer class="site-footer">
@@ -258,5 +308,6 @@
     });
   </script>
   <script src="js/app.js"></script>
+  <script src="js/ai-chatbot.js"></script>
 </body>
 </html>
