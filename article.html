@@ -13,12 +13,15 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
   <title>Tạp chí & Góc Nhìn - HUỲNH HOÀNG THỊNH</title>
   
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/main.css?v=20260830_4">
+  <link rel="stylesheet" href="css/components.css?v=20260830_4">
+  <link rel="stylesheet" href="css/responsive.css?v=20260830_4">
+  <link rel="stylesheet" href="css/chatbot.css?v=20260830_4">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
@@ -272,7 +275,7 @@
         return;
       }
       
-      fetch('data/posts.json')
+      fetch('data/posts.json?t=' + new Date().getTime())
         .then(response => response.json())
         .then(posts => {
           const post = posts.find(p => p.id === articleId);
@@ -307,7 +310,7 @@
         });
     });
   </script>
-  <script src="js/app.js"></script>
-  <script src="js/ai-chatbot.js"></script>
+  <script src="js/app.js?v=20260830_4"></script>
+  <script src="js/ai-chatbot.js?v=20260830_4"></script>
 </body>
 </html>

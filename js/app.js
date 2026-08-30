@@ -237,7 +237,7 @@ window.activateTab = function(tabId) {
   }
 
   if (editorialGrid) {
-    fetch('data/posts.json')
+    fetch('data/posts.json?t=' + new Date().getTime())
       .then(response => response.json())
       .then(posts => {
         let currentFilter = 'all';

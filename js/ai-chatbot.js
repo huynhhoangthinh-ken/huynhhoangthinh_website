@@ -44,8 +44,8 @@
     ]
   };
 
-  // Fetch posts.json on load
-  fetch('data/posts.json')
+  // Fetch posts.json on load (with dynamic timestamp to prevent stale cache)
+  fetch('data/posts.json?t=' + new Date().getTime())
     .then(r => r.json())
     .then(data => { postsData = data; })
     .catch(() => {});
