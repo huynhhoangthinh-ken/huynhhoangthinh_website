@@ -19,7 +19,7 @@
       { id: 110, name: 'Lamborghini Revuelto', price: '600,000 USD', desc: 'Siêu bò V12 Hybrid thế hệ mới nhất 1.015 HP', img: 'assets/vehicles/lamborghini_revuelto.jpg' },
       { id: 111, name: 'Rolls-Royce Spectre', price: '450,000 USD', desc: 'Siêu sang thuần điện đầu tiên trong lịch sử Rolls-Royce', img: 'assets/vehicles/rolls_royce_spectre.jpg' },
       { id: 112, name: 'Porsche 911 GT3 RS', price: '300,000 USD', desc: 'Vua đường đua khí động học 992', img: 'assets/vehicles/porsche_gt3_rs.jpg' },
-      { id: 202, name: 'Louis Vuitton x Singer Porsche 911', price: '2,500,000 GBP', desc: 'Bespoke độc bản kết hợp giữa thời trang xa xỉ và cơ khí đỉnh cao', img: 'assets/Posts/911_LouisVuitton/Porsche-911_LV_00001.webp' }
+      { id: 202, name: 'Louis Vuitton x Singer Porsche 911', price: '2,500,000 GBP', desc: 'Bespoke độc bản kết hợp giữa thời trang xa xỉ và cơ khí đỉnh cao', img: 'assets/Posts/911_LouisVuitton/Thumbnail.webp' }
     ],
     marketCars: [
       { id: 101, name: 'Land Rover Defender X', price: '4.390 Tỷ VNĐ', desc: 'Bản X đỉnh nhất, lướt 35k km, độ hơn 300tr phụ kiện zin', img: 'assets/Xe_dang_giao_dich/Land_rover/DefenderX/11DefenderX.jpg' },
@@ -28,10 +28,11 @@
     ],
     yachts: [
       { id: 122, name: 'Feadship 821 (Viva)', price: '350,000,000 USD', desc: 'Siêu du thuyền 119m chạy bằng Hydrogen đầu tiên thế giới', img: 'assets/vehicles/feadship_821.jpg' },
-      { id: 120, name: 'Oceanco Bravo Eugenia', price: '250,000,000 USD', desc: 'Mega Yacht 109m sinh thái, rạp chiếu phim & bãi đỗ trực thăng', img: 'assets/Posts/Oceanco_Project_2026/Oceanco_Project_2026_00001.webp' },
-      { id: 121, name: 'Lürssen Ahpo', price: '330,000,000 USD', desc: 'Cung điện nổi 115m xa hoa bậc nhất thế giới', img: 'assets/Posts/Lurssen_Ahpo/76393b30-0096-11ed-aed3-f71d7c568098-AHPO-hero-Photography-guillaume-plisson.avif' },
+      { id: 120, name: 'Oceanco Bravo Eugenia', price: '250,000,000 USD', desc: 'Mega Yacht 109m sinh thái, rạp chiếu phim & bãi đỗ trực thăng', img: 'assets/Posts/Oceanco_Project_2026/Oceanco_Project_2026_thumbnail.jpg' },
+      { id: 121, name: 'Lürssen Ahpo', price: '330,000,000 USD', desc: 'Cung điện nổi 115m xa hoa bậc nhất thế giới', img: 'assets/Posts/Lurssen_Ahpo/Lurssen_AhpoThumbnail.avif' },
       { id: 127, name: 'Sunseeker Ocean 182', price: '8,500,000 USD', desc: 'Du thuyền động cơ Anh Quốc với Enclosed Flybridge', img: 'assets/vehicles/sunseeker_ocean_182.jpg' },
-      { id: 128, name: 'Riva 130 Bellissima', price: '22,000,000 USD', desc: 'Flybridge 40m nghệ thuật thủ công tinh hoa từ Ý', img: 'assets/Posts/Riva_130_Bellissima_2026/Riva_130_Bellissima_2026_00001.webp' }
+      { id: 128, name: 'Riva 130 Bellissima', price: '22,000,000 USD', desc: 'Flybridge 40m nghệ thuật thủ công tinh hoa từ Ý', img: 'assets/Posts/Riva_130_Bellissima_2026/Riva_130_Bellissima_2026_00015_thumbnail.webp' },
+      { id: 126, name: 'Azimut Grande 36M', price: '15,000,000 USD', desc: 'Du thuyền Ý đột phá với Semi-walkaround Upper Deck', img: 'assets/Posts/Azimut_Grande_36M_2026/Azimut_Grande_36M_2026_thumbnail.webp' }
     ],
     jets: [
       { id: 123, name: 'Gulfstream G700', price: '78,000,000 USD', desc: 'Chuyên cơ tốc độ Mach 0.925, tầm bay 7.500 hải lý', img: 'assets/vehicles/gulfstream_g700.jpg' },
