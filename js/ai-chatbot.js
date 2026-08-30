@@ -35,8 +35,8 @@
       { id: 126, name: 'Azimut Grande 36M', price: '15,000,000 USD', desc: 'Du thuyền Ý đột phá với Semi-walkaround Upper Deck', img: 'assets/Posts/Azimut_Grande_36M_2026/Azimut_Grande_36M_2026_thumbnail.webp' }
     ],
     jets: [
-      { id: 123, name: 'Gulfstream G700', price: '78,000,000 USD', desc: 'Chuyên cơ tốc độ Mach 0.925, tầm bay 7.500 hải lý', img: 'assets/vehicles/gulfstream_g700.jpg' },
-      { id: 124, name: 'Bombardier Global 8000', price: '81,000,000 USD', desc: 'Chuyên cơ bay xa nhất thế giới (8.000 hải lý)', img: 'assets/vehicles/bombardier_global_8000.jpg' },
+      { id: 123, name: 'Gulfstream G700', price: '78,000,000 USD', desc: 'Chuyên cơ tốc độ Mach 0.925, tầm bay 7.500 hải lý', img: 'assets/Posts/Gulfstream_G700/Gulfstream_G700_22_thumbnail.jpg' },
+      { id: 124, name: 'Bombardier Global 8000', price: '81,000,000 USD', desc: 'Chuyên cơ bay xa nhất thế giới (8.000 hải lý)', img: 'assets/Posts/Bombardier_8000_2026/Bombardier_8000_20266_thumbnail.jpg' },
       { id: 125, name: 'Dassault Falcon 10X', price: '75,000,000 USD', desc: 'Dinh thự bay cabin rộng nhất thế giới từ nước Pháp', img: 'assets/vehicles/dassault_falcon_10x.jpg' }
     ],
     realEstate: [
