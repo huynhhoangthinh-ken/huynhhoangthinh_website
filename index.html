@@ -628,9 +628,17 @@
 </div>
 <!-- Tab 4: Editorial (JSON Auto-Publishing) -->
 <div class="tab-content" id="tab-editorial">
-<div class="grid-listing editorial-grid" id="editorial-grid">
-<!-- Dynamic content injected by app.js -->
-</div>
+  <!-- Editorial Category Filter Bar -->
+  <div class="editorial-filter-bar" id="editorialFilterBar" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; justify-content: center;">
+    <button class="editorial-filter-btn active" data-filter="all" style="padding: 8px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; border: 1px solid #c9a96e; background: #c9a96e; color: #000; transition: all 0.3s ease;">Tất Cả (120+)</button>
+    <button class="editorial-filter-btn" data-filter="bds" style="padding: 8px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; border: 1px solid #333; background: #1a1a1a; color: #ccc; transition: all 0.3s ease;">🏛️ Bất Động Sản & Kiến Trúc</button>
+    <button class="editorial-filter-btn" data-filter="supercar" style="padding: 8px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; border: 1px solid #333; background: #1a1a1a; color: #ccc; transition: all 0.3s ease;">🏎️ Siêu Xe & Hypercar</button>
+    <button class="editorial-filter-btn" data-filter="yacht-jet" style="padding: 8px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; border: 1px solid #333; background: #1a1a1a; color: #ccc; transition: all 0.3s ease;">🛥️ Du Thuyền & Chuyên Cơ</button>
+    <button class="editorial-filter-btn" data-filter="luxury" style="padding: 8px 18px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; border: 1px solid #333; background: #1a1a1a; color: #ccc; transition: all 0.3s ease;">💎 Đồng Hồ & Hàng Hiệu</button>
+  </div>
+  <div class="grid-listing editorial-grid" id="editorial-grid">
+    <!-- Dynamic content injected by app.js -->
+  </div>
 </div>
 </div>
 </section>
