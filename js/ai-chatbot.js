@@ -37,7 +37,7 @@
     jets: [
       { id: 123, name: 'Gulfstream G700', price: '78,000,000 USD', desc: 'Chuyên cơ tốc độ Mach 0.925, tầm bay 7.500 hải lý', img: 'assets/Posts/Gulfstream_G700/Gulfstream_G700_22_thumbnail.jpg' },
       { id: 124, name: 'Bombardier Global 8000', price: '81,000,000 USD', desc: 'Chuyên cơ bay xa nhất thế giới (8.000 hải lý)', img: 'assets/Posts/Bombardier_8000_2026/Bombardier_8000_20266_thumbnail.jpg' },
-      { id: 125, name: 'Dassault Falcon 10X', price: '75,000,000 USD', desc: 'Dinh thự bay cabin rộng nhất thế giới từ nước Pháp', img: 'assets/vehicles/dassault_falcon_10x.jpg' }
+      { id: 125, name: 'Dassault Falcon 10X', price: '75,000,000 USD', desc: 'Dinh thự bay cabin rộng nhất thế giới từ nước Pháp', img: 'assets/Posts/falcon-10x/falcon-10x15_thumbnail.jpg' }
     ],
     realEstate: [
       { id: 601, name: 'Saigon Farm Resort', price: 'Liên hệ Host Thịnh', desc: 'Resort sinh thái nghỉ dưỡng ven đô phong cách thượng lưu', img: 'assets/Saigon_Farm_Resort/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg' },
