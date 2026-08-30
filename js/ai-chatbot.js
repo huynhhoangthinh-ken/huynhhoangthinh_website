@@ -19,7 +19,7 @@
       { id: 110, name: 'Lamborghini Revuelto', price: '600,000 USD', desc: 'Siêu bò V12 Hybrid thế hệ mới nhất 1.015 HP', img: 'assets/vehicles/lamborghini_revuelto.jpg' },
       { id: 111, name: 'Rolls-Royce Spectre', price: '450,000 USD', desc: 'Siêu sang thuần điện đầu tiên trong lịch sử Rolls-Royce', img: 'assets/vehicles/rolls_royce_spectre.jpg' },
       { id: 112, name: 'Porsche 911 GT3 RS', price: '300,000 USD', desc: 'Vua đường đua khí động học 992', img: 'assets/vehicles/porsche_gt3_rs.jpg' },
-      { id: 202, name: 'Louis Vuitton x Singer Porsche 911', price: '2,500,000 GBP', desc: 'Bespoke độc bản kết hợp giữa thời trang xa xỉ và cơ khí đỉnh cao', img: 'assets/Index_asset/lv_singer_turbo_front.jpg' }
+      { id: 202, name: 'Louis Vuitton x Singer Porsche 911', price: '2,500,000 GBP', desc: 'Bespoke độc bản kết hợp giữa thời trang xa xỉ và cơ khí đỉnh cao', img: 'assets/Posts/911_LouisVuitton/Porsche-911_LV_00001.webp' }
     ],
     marketCars: [
       { id: 101, name: 'Land Rover Defender X', price: '4.390 Tỷ VNĐ', desc: 'Bản X đỉnh nhất, lướt 35k km, độ hơn 300tr phụ kiện zin', img: 'assets/Xe_dang_giao_dich/Land_rover/DefenderX/11DefenderX.jpg' },
