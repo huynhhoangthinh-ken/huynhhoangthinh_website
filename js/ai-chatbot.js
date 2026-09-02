@@ -16,8 +16,8 @@
       { id: 107, name: 'Koenigsegg Jesko', price: '3,000,000 USD', desc: '1.600 mã lực, tốc độ tối đa lý thuyết 531 km/h - "Thần gió" Thụy Điển', img: 'assets/Posts/Koenigsegg_Jesko_2026/Koenigsegg_Jesko_20261_thumbnail.webp' },
       { id: 108, name: 'Bugatti Tourbillon (2026)', price: '4,100,000 USD', desc: 'Động cơ V16 Hybrid 1.800 mã lực, cụm đồng hồ cơ học Thụy Sĩ đỉnh cao', img: 'assets/Posts/Bugatti_tourbillon_2026/Bugatti Tourbillon (2026)1.jpg' },
       { id: 109, name: 'Ferrari LaFerrari', price: '3,500,000 USD', desc: 'Hypercar Hybrid V12 963 HP kiệt tác từ Maranello', img: 'assets/Posts/ferrari-laferrari/ferrari-laferrari-0f31e-c414325082026194653_1.jpg' },
-      { id: 110, name: 'Lamborghini Revuelto', price: '600,000 USD', desc: 'Siêu bò V12 Hybrid thế hệ mới nhất 1.015 HP', img: 'assets/vehicles/lamborghini_revuelto.jpg' },
-      { id: 111, name: 'Rolls-Royce Spectre', price: '450,000 USD', desc: 'Siêu sang thuần điện đầu tiên trong lịch sử Rolls-Royce', img: 'assets/Posts/Porsche 911 GT3 RS 2026/thumnail_Porsche 911 GT3 RS 20266.webp' },
+      { id: 110, name: 'Lamborghini Revuelto', price: '600,000 USD', desc: 'Siêu bò V12 Hybrid thế hệ mới nhất 1.015 HP', img: 'assets/Posts/lamborghini-revuelto/404252-2026-lamborghini-revuelto.jpg' },
+      { id: 111, name: 'Rolls-Royce Spectre', price: '450,000 USD', desc: 'Siêu sang thuần điện đầu tiên trong lịch sử Rolls-Royce', img: 'assets/Posts/Rolls_Royce_spectre/Thumbnail.webp' },
       { id: 112, name: 'Porsche 911 GT3 RS', price: '300,000 USD', desc: 'Vua đường đua khí động học 992', img: 'assets/vehicles/porsche_gt3_rs.jpg' },
       { id: 202, name: 'Louis Vuitton x Singer Porsche 911', price: '2,500,000 GBP', desc: 'Bespoke độc bản kết hợp giữa thời trang xa xỉ và cơ khí đỉnh cao', img: 'assets/Posts/911_LouisVuitton/Thumbnail.webp' }
     ],
