@@ -19,6 +19,7 @@ thumbnail_map = {
     801: 'assets/Posts/SO_Madilves/thumbnail.webp',
     802: 'assets/Posts/Six_senses_Con_Dao/Thumbnail.jpg',
     803: 'assets/Posts/Six_senses_ninh_van_bay/Thumbnail.jpg',
+    804: 'assets/Posts/amanoi/thumbnail_amanoi.avif',
     805: 'assets/Posts/Amanzoe_Greece/Thumbnail.jpg',
     806: 'assets/Posts/Cap_St_Georges_Resort/Thumbnail.jpg',
     809: 'assets/Posts/Ritz_carlton_Astana/Thumbnail.jpeg',
@@ -50,6 +51,7 @@ thumbnail_map = {
     131: 'assets/Posts/Pilatus PC-24_2026/Thumbnail.webp',
     716: 'assets/Posts/Airbus_ACH145_ACH160/Airbus_ACH145_thumbnail.jpg',
     617: 'assets/Posts/Helicopter/thumbnail_Helicopter_3.jpg.webp',
+    18: 'assets/Posts/Helicopter/thumbnail_Helicopter_3.jpg.webp',
     
     # Watches
     618: 'assets/Posts/Patek Philippe Grandmaster Chime & Nautilus/Patek Philippe Grandmaster Chime & Nautilus:6_thumbnail.avif',
