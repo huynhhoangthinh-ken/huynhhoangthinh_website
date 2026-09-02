@@ -59,7 +59,7 @@ thumbnail_map = {
     # Real Estate & Cars Market
     606: 'assets/projects/03_RIVUS/Thumbnail.jpg',
     704: 'assets/projects/03_RIVUS/Thumbnail.jpg',
-    117: 'assets/Posts/Bentley_Continental_GT_2026/thumbnail.jpg',
+    117: 'assets/Posts/Bentley_Flying_Spur_V8/Bentley Flying Spur V8-8.webp',
     405: 'assets/Posts/Bentley_Flying_Spur_V8/thumbnail.webp',
     406: 'assets/Posts/Range_rover_LWB_2024/Thumnbail_Rang_river_LWB.jpeg',
     407: 'assets/Xe_dang_giao_dich/BMW/BMW_735_MSP/Thumbnail.jpg',
@@ -205,7 +205,8 @@ html = html.replace('src="assets/Posts/lamborghini-revuelto/404252-2026-lamborgh
 html = html.replace('src="assets/vehicles/maserati_mc20.jpg"', 'src="assets/Posts/Maserati_MC20/thumbnail_2023-maserati-mc20-cielo-spyder-28-1666275747.avif"')
 html = html.replace('src="assets/Posts/Pagani_Utopia_2026/Pagani_Utopia_2026_1.avif"', 'src="assets/Posts/Pagani_Utopia_2026/thumbnail.avif"')
 html = html.replace('src="assets/Posts/bugatti-chiron/bugatti-chiron_1.jpg"', 'src="assets/Posts/bugatti-chiron/bugatti-chiron_3_thumbnail.jpg"')
-html = html.replace('src="assets/vehicles/bentley_continental_gt.jpg"', 'src="assets/Posts/Bentley_Continental_GT_2026/thumbnail.jpg"')
+html = html.replace('src="assets/vehicles/bentley_continental_gt.jpg"', 'src="assets/Posts/Bentley_Flying_Spur_V8/Bentley Flying Spur V8-8.webp"')
+html = html.replace('src="assets/Posts/Bentley_Continental_GT_2026/thumbnail.jpg"', 'src="assets/Posts/Bentley_Flying_Spur_V8/Bentley Flying Spur V8-8.webp"')
 
 # Update Yachts & Jets
 html = html.replace("style=\"background-image: url('assets/Posts/Feadship_821_(Viva)_2026/Feadship_821_(Viva)_20261.webp');\"", "style=\"background-image: url('assets/Posts/Feadship_821_(Viva)_2026/Feadship_821_(Viva)_20263_thumbnail.webp');\"")
