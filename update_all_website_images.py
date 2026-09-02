@@ -58,6 +58,7 @@ thumbnail_map = {
     
     # Real Estate & Cars Market
     606: 'assets/projects/03_RIVUS/Thumbnail.jpg',
+    609: 'assets/projects/12_GLADIA/Gladia Web Dai Chung1_NoiThat_NhaBep.jpg',
     704: 'assets/projects/03_RIVUS/Thumbnail.jpg',
     117: 'assets/Posts/Bentley_Flying_Spur_V8/Bentley Flying Spur V8-2.webp',
     405: 'assets/Posts/Bentley_Flying_Spur_V8/thumbnail.webp',
