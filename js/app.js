@@ -212,6 +212,10 @@ window.activateTab = function(tabId) {
     const id = post.id;
     const title = (post.title || '').toLowerCase();
     
+    // 0. Luxury Resorts & Travel
+    if ((id >= 801 && id <= 813) || title.includes('resort') || title.includes('maldives') || title.includes('amanoi') || title.includes('six senses') || title.includes('amangiri') || title.includes('amanzoe') || title.includes('soneva') || title.includes('bulgari resort') || title.includes('villa d\'este') || title.includes('bürgenstock') || title.includes('cap-ferrat') || title.includes('cap st georges')) {
+      return 'resort';
+    }
     // 1. Real Estate Projects & Architecture
     if ((id >= 601 && id <= 610) || (id >= 501 && id <= 530) || [1, 4, 6, 9, 12, 15, 18, 19].includes(id) || title.includes('saigon farm') || title.includes('marq') || title.includes('global city') || title.includes('rivus') || title.includes('blanca') || title.includes('urban green') || title.includes('gladia') || title.includes('sola') || title.includes('bất động sản') || title.includes('villa') || title.includes('dinh thự') || title.includes('penthouse') || title.includes('điền trang') || title.includes('điền sản') || title.includes('điền an')) {
       return 'bds';
@@ -237,6 +241,7 @@ window.activateTab = function(tabId) {
 
   function getCategoryLabel(cat) {
     switch (cat) {
+      case 'resort': return 'RESORT & NGHỈ DƯỠNG XA XỈ';
       case 'bds': return 'BẤT ĐỘNG SẢN SIÊU SANG';
       case 'supercar': return 'SIÊU XE & HYPERCAR';
       case 'yacht-jet': return 'DU THUYỀN & CHUYÊN CƠ';
