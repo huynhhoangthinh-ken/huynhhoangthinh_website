@@ -8,7 +8,7 @@
  */
 (function () {
   // === ĐIỀN MÃ MEASUREMENT ID VÀO ĐÂY (VD: 'G-1234567890') ===
-  const GA_MEASUREMENT_ID = 'G-0BJP6BZRF8';
+  const GA_MEASUREMENT_ID = 'G-2M21GSPT7Z';
 
   // Nếu chưa điền hoặc là mã placeholder thì không thực hiện gì (không gây lỗi console, không gửi request rác)
   if (
