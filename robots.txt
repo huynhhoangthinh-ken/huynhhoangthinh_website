@@ -10,16 +10,16 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-# Bing Search & Copilot
+# Bing Search & Microsoft Copilot
 User-agent: Bingbot
 Allow: /
 
-# Anthropic Claude Search & Discovery
-User-agent: ClaudeBot
+# Perplexity AI Search Discovery
+User-agent: PerplexityBot
 Allow: /
 
-# Perplexity AI Search
-User-agent: PerplexityBot
+# Anthropic Search Discovery (Search only, separate from training crawler)
+User-agent: Claude-SearchBot
 Allow: /
 
 # Disallow scanning of non-existent CMS utility paths
