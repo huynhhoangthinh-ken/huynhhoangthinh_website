@@ -1,0 +1,30 @@
+# robots.txt for https://huynhhoangthinh.com
+User-agent: *
+Allow: /
+
+# OpenAI Search Discovery (ChatGPT Search)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google Search & Google AI Overviews
+User-agent: Googlebot
+Allow: /
+
+# Bing Search & Copilot
+User-agent: Bingbot
+Allow: /
+
+# Anthropic Claude Search & Discovery
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+
+# Disallow scanning of non-existent CMS utility paths
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# Sitemap Location
+Sitemap: https://huynhhoangthinh.com/sitemap.xml

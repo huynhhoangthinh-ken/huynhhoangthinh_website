@@ -2,310 +2,34 @@
 <html lang="vi">
 <head>
   <!-- Google Analytics 4 -->
-  <script src="js/analytics.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-  <meta http-equiv="Pragma" content="no-cache"/>
-  <meta http-equiv="Expires" content="0"/>
   <title>Tạp chí & Góc Nhìn - HUỲNH HOÀNG THỊNH</title>
   
-  <link rel="stylesheet" href="css/main.css?v=20260903_1">
-  <link rel="stylesheet" href="css/components.css?v=20260902_1">
-  <link rel="stylesheet" href="css/responsive.css?v=20260902_1">
-  <link rel="stylesheet" href="css/chatbot.css?v=20260902_1">
+  <script>
+    // Instant Redirect from legacy ?id=XXX to canonical SEO slug /article/<slug>/
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var id = parseInt(params.get('id'));
+      var slugMap = {"801": "review-so-maldives-ban-tuyen-ngon-thoi-trang-avant-garde-giua-thien", "802": "six-senses-con-dao-tuyet-tac-an-minh-ben-bo-vinh-dat", "803": "six-senses-ninh-van-bay-kiet-tac-biet-lap-giua-quan-the", "804": "amanoi-ninh-thuan-dinh-cao-xa-xi-tinh-lang-cua-gia-toc", "805": "amanzoe-hy-lap-den-tho-acropolis-duong-dai-vuon-minh-tren-doi", "806": "cap-st-georges-resort-sip-cyprus-diem-hen-xa-hoa-dam-chat", "807": "soneva-kiri-koh-kood-thai-lan-triet-ly-no-news-no-shoes", "808": "bulgari-resort-bali-tuyet-tac-trang-suc-y-doc-ban-tren-vach", "809": "the-ritz-carlton-astana-bieu-tuong-vuong-gia-tai-thu-do-tuong", "810": "amangiri-utah-my-ky-quan-kien-truc-toi-gian-hoa-quyen-hem", "811": "villa-deste-ho-como-y-cung-dien-phuc-hung-500-nam-tuoi", "812": "burgenstock-resort-thuy-si-kiet-tac-tren-vach-nui-500m-ho-boi", "813": "grand-hotel-du-cap-ferrat-phap-cung-dien-nghi-duong-huyen-thoai", "601": "saigon-farm-resort-tuyet-tac-dien-trang-ban-sac-viet-duong-dai", "602": "dinh-thu-dien-an-saigon-farm-resort-dinh-cao-rieng-tu-giua", "603": "dien-san-saigon-farm-resort-khong-gian-song-ba-the-he-gan", "604": "the-marq-quan-1-dau-an-bat-dong-san-sieu-sang-giua", "605": "the-global-city-do-thi-bieu-tuong-chuan-quoc-te-tai-trung", "606": "the-rivus-elie-saab-bo-suu-tap-dinh-thu-noi-haute-couture", "607": "urban-green-thu-duc-chuan-muc-can-ho-xanh-nghi-duong-phong", "608": "blanca-city-vung-tau-quan-the-do-thi-nghi-duong-bien-dang", "408": "land-rover-defender-x-400hp-ban-x-dinh-nhat-luot-35000-km", "400": "maserati-grecale-gt-mild-hybrid-300hp-sieu-pham-suv-nuoc-y-vo", "407": "bmw-735i-m-sport-all-new-g70-sieu-luot-8100-km-dep", "202": "louis-vuitton-dua-nghe-thuat-du-hanh-len-porsche-911-02-tuyet", "1": "villa-trung-tam-tp-ho-chi-minh-xu-huong-khong-the-thay", "2": "du-thuyen-sieu-sang-2026-ky-nguyen-cua-nhung-resort-noi-tren", "3": "hypercar-2026-toc-do-tuyet-dinh-va-nghe-thuat-che-tac-khong", "4": "penthouse-the-view-song-o-tang-cao-nhat-cua-giac-mo-do", "5": "private-jet-2026-khi-bau-troi-tro-thanh-van-phong-va-resort", "6": "dinh-thu-dao-xu-huong-tim-kiem-binh-yen-tuyet-doi-cua", "7": "bo-suu-tap-sieu-xe-gioi-han-2026-khi-tinh-khan-hiem", "8": "mega-yacht-sieu-do-thi-noi-va-dac-quyen-cua-nhung-ty", "9": "nghe-thuat-noi-that-bespoke-khi-khong-gian-song-tro-thanh-chu", "10": "chuyen-co-thuong-gia-2026-nhung-co-may-bay-dang-dinh-hinh", "11": "gia-tri-cua-su-doc-ban-tai-sao-gioi-sieu-giau-tra", "12": "villa-sinh-thai-sieu-sang-khi-ben-vung-tro-thanh-dac-quyen", "13": "monaco-yacht-show-2026-nhung-sieu-pham-hang-hai-vua-duoc-ra", "14": "hanh-trinh-mua-sieu-xe-tai-chau-au-bi-quyet-tu-nhung", "15": "bat-dong-san-nghi-duong-thuy-si-thien-duong-tru-an-cua", "16": "bao-quan-sieu-xe-nghe-thuat-gin-giu-nhung-tuyet-tac-co", "17": "nghe-thuat-chon-ruou-vang-cao-cap-cam-nang-cho-nhung-bua", "18": "top-7-mau-truc-thang-ca-nhan-dat-do-xa-xi-nhat", "19": "smart-home-sieu-sang-2026-khi-tri-tue-nhan-tao-tro-thanh", "20": "dau-tu-may-bay-ca-nhan-chien-luoc-tai-san-thay-the", "101": "dinh-thu-dao-ngoc-ven-song-sai-gon-khong-gian-song-tinh", "102": "biet-thu-dinh-doi-tam-nhin-panorama-sai-gon-khong-gioi-han", "103": "penthouse-doc-ban-trung-tam-quan-1-dinh-cao-cua-loi-song", "104": "villa-thao-dien-khong-gian-xanh-giua-long-do-thi", "105": "biet-thu-tinh-hoa-phu-my-hung-dang-cap-cong-dong-thuong", "106": "dinh-thu-ven-song-quan-2-tam-nhin-sai-gon-va-ben", "107": "koenigsegg-jesko-2026-tuyet-tac-toc-do-480kmh-va-ky-nguyen-dong", "108": "bugatti-tourbillon-2026-tuyet-tac-hypercar-v16-1800-ma-luc-cum-dong", "109": "ferrari-laferrari-2026-dinh-cao-dong-co-v12-hybrid-di-san-huyen", "110": "lamborghini-revuelto-2026-sieu-xe-hybrid-v12-dau-tien-mo-ra-ky", "111": "rolls-royce-spectre-2026-kiet-tac-coupe-dien-sieu-sang-dinh-nghia", "112": "porsche-911-gt3-rs-2026-quai-thu-duong-dua-va-dinh-cao", "113": "mclaren-750s-2026-trong-luong-sieu-nhe-va-cam-giac-lai-thuan", "114": "aston-martin-valkyrie-2026-xe-dua-f1-duoc-phep-lan-banh-tren", "115": "pagani-utopia-2026-tac-pham-nghe-thuat-co-khi-v12-thuan-chung", "116": "maserati-mc20-2026-trai-tim-dong-co-nettuno-f1-va-su-hoi", "117": "bentley-flying-spur-v8-dinh-cao-sedan-sieu-sang-quy-toc-anh", "118": "mercedes-amg-one-2026-mang-cong-nghe-dong-co-dua-f1-truc", "119": "koenigsegg-gemera-2026-mega-gt-4-cho-dau-tien-the-gioi-so", "120": "oceanco-project-2026-mega-yacht-109m-dinh-cao-voi-he-truyen-dong", "121": "lurssen-ahpo-2026-cung-dien-noi-115m-cua-su-sang-trong-tuyet", "122": "feadship-821-viva-2026-sieu-pham-du-thuyen-119m-su-dung-nhien", "123": "gulfstream-g700-2026-chuyen-co-thuong-gia-tam-xa-nhanh-nhat-va", "124": "bombardier-global-8000-7500-2026-chuyen-co-tam-bay-ky-luc-14800km", "125": "dassault-falcon-10x-2026-dinh-thu-bay-moi-cua-hang-khong-thuong", "126": "azimut-grande-36m-2026-du-thuyen-y-hien-dai-voi-thiet-ke", "127": "sunseeker-ocean-182-100-yacht-2026-khong-gian-song-bien-cuc-dai", "128": "riva-130-bellissima-2026-tuyet-tac-flybridge-40m-mang-hoi-tho-nghe", "129": "cessna-citation-longitude-2026-dinh-cao-hieu-qua-va-su-yen-tinh", "130": "embraer-praetor-600-2026-chuyen-co-cong-nghe-triet-tieu-nhieu-dong", "131": "pilatus-pc-24-2026-super-versatile-jet-doc-nhat-co-kha-nang", "200": "bugatti-chiron-pur-sport-bieu-tuong-vinh-cuu-cua-dong-co-w16", "201": "rolls-royce-phantom-viii-2026-dinh-cao-doc-ban-danh-cho-gioi", "301": "ve-huynh-hoang-thinh-dai-chung-properties-nguoi-giam-tuyen-bat-dong", "302": "tuyen-dung-gia-nhap-doi-ngu-dai-chung-properties-dong-hanh-cung", "303": "bao-chi-truyen-thong-huynh-hoang-thinh-dai-chung-properties-tren-hanh", "304": "lien-he-huynh-hoang-thinh-dai-chung-properties-ket-noi-voi-chuyen", "401": "porsche-911-gt3-rs-2024-ban-weissach-package-san-xe-giao-ngay", "402": "rolls-royce-cullinan-black-badge-2023-dinh-cao-suv-quyen-luc-nhat", "403": "mercedes-maybach-s680-4matic-2024-dong-co-v12-doc-ban-moi-100", "404": "ferrari-296-gtb-2023-sieu-ngua-v6-hybrid-819-ma-luc", "405": "bentley-flying-spur-v8-first-edition-2023-sang-trong-the-thao", "406": "range-rover-sv-lwb-2024-dinh-thu-4-cho-thuong-gia-dang", "409": "mercedes-maybach-s450-4matic-2019-xe-1-chu-full-lich-su-hang", "410": "porsche-macan-gts-2021-sieu-luot-7800-km-v6-30-440hp-ghe", "411": "porsche-911-carrera-4s-992-luot-7800-km-con-bh-chinh-hang", "412": "porsche-911-nang-cap-goi-do-gt3-touring-option-hang-hon-1", "413": "porsche-718-boxster-s-mui-tran-luot-43000-km-dep-hoan-hao", "414": "porsche-911-carrera-s-992-lan-banh-9000-km-build-option-chinh", "415": "bentley-rose-gold-bespoke-edition-ngoai-that-doc-ban-noi-that-da", "501": "kien-truc-dinh-thu-ven-bien-khi-thien-nhien-giao-hoa-cung", "502": "xu-huong-biet-thu-compound-biet-lap-chuan-muc-moi-cua-su", "503": "noi-that-bespoke-trieu-do-nghe-thuat-thu-cong-tinh-xao-ton", "504": "ho-boi-vo-cuc-chan-may-bieu-tuong-cua-phong-cach-song", "505": "dinh-thu-xanh-kien-truc-ben-vung-tuong-lai-cua-bat-dong", "506": "phong-ngu-master-suite-trong-dinh-thu-ty-do-khong-gian-nuong", "507": "clubhouse-dac-quyen-he-sinh-thai-giao-luu-kin-tieng-cua-gioi", "508": "penthouse-view-panorama-dinh-cao-thuong-lam-toan-canh-do-thi-ve", "509": "nghe-thuat-thiet-ke-walk-in-closet-dang-cap-cho-bo-suu", "510": "bep-mo-hien-dai-dao-bep-da-marble-trai-tim-cua-nhung", "511": "khong-gian-cham-soc-suc-khoe-tai-gia-phong-gym-yoga-private", "512": "phong-tam-chuan-spa-quoc-te-noi-rua-troi-cang-thang-trong", "513": "second-home-nghi-duong-ven-bien-tai-san-tich-san-di-san", "514": "vat-lieu-go-tu-nhien-da-quy-trong-kien-truc-biet-thu", "515": "ban-cong-logia-view-bien-khong-gian-thuong-tra-ngam-binh-minh", "516": "dinh-thu-co-ben-du-thuyen-rieng-chuan-muc-song-vuot-troi", "517": "he-thong-smart-home-ai-the-he-moi-trong-cac-sieu-biet", "518": "nghe-thuat-chieu-sang-architectural-lighting-ton-vinh-duong-net-kiet-tac", "519": "khu-vuc-bbq-tiec-ngoai-troi-noi-gan-ket-nhung-moi-quan", "520": "phong-cach-thiet-ke-biophilic-mang-rung-nhiet-doi-vao-khong-gian", "521": "tai-sao-vi-tri-kim-cuong-luon-dinh-doat-gia-tri-bat", "522": "can-ho-branded-residences-su-ket-hop-giua-bat-dong-san-va", "523": "ky-nghe-xay-dung-biet-thu-vach-kinh-lon-xoa-nhoa-ranh", "524": "ham-ruou-vang-dang-cap-phong-xi-ga-private-trong-cac-dinh", "525": "phong-thuy-hien-dai-trong-thiet-ke-nha-o-cho-gioi-doanh", "526": "san-vuon-zen-nhat-ban-oc-dao-tinh-lang-giua-nhip-song", "527": "an-ninh-da-lop-chuan-quan-su-cho-cac-khu-dinh-thu", "528": "nghe-thuat-suu-tam-tac-pham-nghe-thuat-trong-khong-gian-dinh", "529": "xu-huong-song-quiet-luxury-sang-trong-tinh-te-khong-can-pho", "530": "quy-trinh-giam-tuyen-bat-dong-san-trieu-do-bi-quyet-tu", "609": "gladia-gladia-heights-tuyet-tac-kien-truc-song-dinh-cao-cho-cong", "610": "sola-nha-pho-vuon-khong-gian-song-sinh-thai-sang-trong-giua", "611": "benetti-oasis-deck-xu-huong-thiet-ke-boong-mo-sat-mat-bien", "612": "riva-130-bellissima-kiet-tac-du-thuyen-y-mang-dam-hoi-tho", "613": "sunseeker-ocean-182-khai-niem-penthouse-di-dong-tren-mat-nuoc-voi", "614": "gulfstream-g700-g800-ky-nguyen-moi-cua-chuyen-co-sieu-tam-xa", "615": "bombardier-global-7500-global-8000-chuyen-co-thuong-gia-nhanh-nhat-em", "616": "dassault-falcon-10x-penthouse-bay-so-huu-khoang-cabin-rong-nhat-lich", "617": "top-7-mau-truc-thang-ca-nhan-dat-do-xa-xi-nhat-617", "618": "patek-philippe-grandmaster-chime-nautilus-kiet-tac-104769000000-vnd-kenh-tich-tru", "619": "audemars-piguet-royal-oak-concept-nghe-thuat-giao-thoa-ky-nghe-tuong", "620": "hermes-bespoke-nghe-thuat-dat-may-rieng-khi-su-xa-xi-la", "701": "bao-cao-thinh-vuong-the-wealth-report-2026-dan-so-sieu-giau", "702": "chi-so-piri-100-2026-bat-dong-san-sieu-sang-toan-cau", "703": "chien-luoc-family-office-2026-10000-van-phong-gia-toc-tai-cau", "704": "loi-song-sieu-co-dong-dip-in-dip-out-2026-khi-gioi", "705": "chi-so-dau-tu-xa-xi-kflii-2026-nghe-thuat-an-tuong", "706": "thi-truong-sieu-xe-co-dien-halo-cars-2026-ky-luc-dau", "707": "thi-truong-sieu-du-thuyen-toan-cau-2026-bung-no-70-ky", "708": "hang-khong-tu-nhan-2026-ban-do-song-da-diem-chuyen-co", "709": "dau-tu-vuon-nho-toan-cau-global-vineyard-index-2026-nghe-thuat", "710": "bat-dong-san-thuong-mai-ha-tang-nang-luong-ai-2026-lan", "711": "thi-truong-nghe-thuat-toan-cau-2026-sau-con-sot-vang-dau", "712": "nen-kinh-te-chuyen-hoa-the-transformation-economy-2026-khi-su-xa", "713": "bai-hoc-tu-gia-toc-cadogan-chelsea-london-nghe-thuat-giam-tuyen", "714": "so-huu-phan-doan-bo-suu-tap-the-he-moi-2026-hoa", "715": "ha-tang-khong-gian-vu-tru-the-final-frontier-2026-ve-tinh", "716": "airbus-ach145-ach160-2026-dinh-cao-truc-thang-hang-sang-the-he", "717": "pilatus-pc-24-2026-chiec-jet-canh-quat-duy-nhat-co-the", "135": "range-rover-gt-concept-crossover-dien-co-lon-tai-dinh-nghia-phan"};
+      if (id && slugMap[id]) {
+        window.location.replace('/article/' + slugMap[id] + '/');
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/css/main.css?v=20260903_1">
+  <link rel="stylesheet" href="/css/components.css?v=20260902_1">
+  <link rel="stylesheet" href="/css/responsive.css?v=20260902_1">
+  <link rel="stylesheet" href="/css/chatbot.css?v=20260902_1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    .article-header {
-      padding: 100px 0 60px;
-      text-align: center;
-      background-color: var(--color-light-gray);
-      margin-bottom: 60px;
-    }
-    .article-title {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      max-width: 900px;
-      margin: 0 auto 20px;
-      line-height: 1.2;
-    }
-    .article-meta {
-      font-size: 0.9rem;
-      color: var(--color-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    .article-featured-image {
-      max-width: 1000px;
-      margin: 0 auto 60px;
-    }
-    .article-featured-image img {
-      width: 100%;
-      border-radius: 4px;
-    }
-    .article-content {
-      max-width: 760px;
-      margin: 0 auto 100px;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--color-body);
-    }
-    .article-content p {
-      margin-bottom: 24px;
-    }
-    /* Editorial Elements */
-    .article-content > p:first-of-type::first-letter {
-      float: left;
-      font-family: var(--font-serif);
-      font-size: 5rem;
-      line-height: 0.8;
-      padding-top: 4px;
-      padding-right: 12px;
-      color: var(--color-dark);
-    }
-    .pull-quote {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-style: italic;
-      color: var(--color-dark);
-      margin: 40px -40px;
-      padding: 30px;
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-      text-align: center;
-    }
-    .key-takeaways {
-      background-color: var(--color-white);
-      border: 2px solid #d4af37; /* Matte Gold */
-      padding: 30px;
-      margin: 40px 0;
-      border-radius: 4px;
-    }
-    .key-takeaways h3 {
-      font-family: var(--font-serif);
-      color: #d4af37;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-    }
-    .key-takeaways ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-    .key-takeaways li {
-      margin-bottom: 10px;
-    }
-    .article-content h2 {
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      margin: 40px 0 20px;
-      color: var(--color-dark);
-    }
-  </style>
 </head>
 <body>
-
-  <!-- Top Utility Bar -->
-  <div class="top-bar">
-    <div class="container">
-      <a href="index.html#sell">Sell with Us</a>
-      <a href="index.html#agents">For Agents <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
-      <a href="index.html#saved"><i class="fa-regular fa-heart"></i> Saved</a>
-    </div>
+  <div style="text-align: center; padding: 120px 20px; font-family: sans-serif;">
+    <p style="font-size: 1.1rem; color: #555;">Đang mở bài viết...</p>
   </div>
-
-  <!-- Main Navigation Header (Dark Version for inner pages) -->
-  <header class="main-header" style="position: fixed; top: 0; background: rgba(10,10,10,0.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);">
-    <div class="container header-container">
-      <a class="brand-identity" href="index.html">
-        <div class="brand-avatar-ring">
-          <img src="assets/Index_asset/ceo_thinh.jpg" alt="Huỳnh Hoàng Thịnh" class="brand-avatar-img"/>
-        </div>
-        <div class="brand-text-block">
-          <span class="brand-logo">HUỲNH HOÀNG THỊNH</span>
-          <span class="brand-tagline">NGƯỜI GIÁM TUYỂN XA XỈ</span>
-        </div>
-      </a>
-
-      <nav class="nav-menu-links">
-        <a href="index.html">Trang Chủ</a>
-        <a href="index.html#tab-resorts">Resort Xa Xỉ</a>
-        <a href="index.html#tab-cars">Siêu Xe</a>
-        <a href="index.html#tab-yachts">Du Thuyền & Chuyên Cơ</a>
-        <a href="index.html#tab-cars-market">Xe Đang Giao Dịch</a>
-        <a href="index.html#tab-realestate">Bất Động Sản</a>
-        <a href="index.html#tab-editorial" class="active">Tạp chí</a>
-      </nav>
-
-      <button class="menu-toggle-btn" id="mobileMenuBtn" aria-label="Mở menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile Menu Overlay + Drawer -->
-  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-  <nav class="mobile-menu-drawer" id="mobileMenuDrawer">
-    <div class="mobile-menu-header">
-      <span class="mobile-menu-logo">HUỲNH HOÀNG THỊNH</span>
-      <button aria-label="Đóng menu" class="mobile-menu-close" id="mobileMenuClose">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
-    <div class="mobile-menu-links">
-      <a href="index.html"><i class="fa-solid fa-house" style="width:20px;margin-right:8px;"></i>Trang Chủ</a>
-      <a href="index.html#tab-resorts"><i class="fa-solid fa-umbrella-beach" style="width:20px;margin-right:8px;"></i>Resort Xa Xỉ</a>
-      <a href="index.html#tab-cars"><i class="fa-solid fa-car" style="width:20px;margin-right:8px;"></i>Siêu Xe</a>
-      <a href="index.html#tab-yachts"><i class="fa-solid fa-sailboat" style="width:20px;margin-right:8px;"></i>Du Thuyền & Chuyên Cơ</a>
-      <a href="index.html#tab-cars-market"><i class="fa-solid fa-car-side" style="width:20px;margin-right:8px;"></i>Xe Đang Giao Dịch</a>
-      <a href="index.html#tab-realestate"><i class="fa-solid fa-building-columns" style="width:20px;margin-right:8px;"></i>Bất Động Sản</a>
-      <a href="index.html#tab-editorial" class="active"><i class="fa-solid fa-newspaper" style="width:20px;margin-right:8px;"></i>Tạp Chí</a>
-    </div>
-    <div class="mobile-menu-footer">© 2026 Huỳnh Hoàng Thịnh (Đại Chúng Properties)</div>
-  </nav>
-
-  <main id="article-container" style="padding-top: 70px;">
-    <!-- Article content will be rendered here by JS -->
-    <div style="text-align: center; padding: 100px;">Đang tải bài viết...</div>
-  </main>
-
-  <!-- Related Editorial Section -->
-  <section class="news-section" style="border-top: 1px solid #f0f0f0; padding-top: 40px;">
-    <div class="container">
-      <div class="editorial-latest-block">
-        <h3 class="editorial-latest-heading">Góc Nhìn & Xu Hướng Khác</h3>
-        <div class="editorial-row-list">
-          <a class="editorial-row-item" href="article.html?id=1">
-            <div class="row-item-thumb">
-              <img alt="Villa trung tâm TP.HCM" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800"/>
-            </div>
-            <div class="row-item-body">
-              <span class="row-item-cat">NHẬN ĐỊNH THỊ TRƯỜNG</span>
-              <h4 class="row-item-title">Villa trung tâm TP. Hồ Chí Minh: xu hướng đầu tư bất động sản siêu sang</h4>
-            </div>
-            <div class="row-item-action">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </a>
-
-          <a class="editorial-row-item" href="article.html?id=601">
-            <div class="row-item-thumb">
-              <img alt="Saigon Farm Resort" src="assets/Saigon_Farm_Resort/Phoi_canh_tong_the/SFR_S01_Final_Fix.jpg"/>
-            </div>
-            <div class="row-item-body">
-              <span class="row-item-cat">PHONG CÁCH SỐNG</span>
-              <h4 class="row-item-title">Những bất động sản định hình gu sống mới</h4>
-            </div>
-            <div class="row-item-action">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </a>
-
-          <a class="editorial-row-item" href="article.html?id=202">
-            <div class="row-item-thumb">
-              <img alt="Louis Vuitton x Singer Porsche 911" src="assets/Posts/911_LouisVuitton/Thumbnail.webp"/>
-            </div>
-            <div class="row-item-body">
-              <span class="row-item-cat">NGHỆ THUẬT CHẾ TÁC</span>
-              <h4 class="row-item-title">Louis Vuitton đưa nghệ thuật du hành lên Porsche 911</h4>
-            </div>
-            <div class="row-item-action">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top-grid">
-        <div>
-          <div class="footer-brand-title">HUỲNH HOÀNG THỊNH</div>
-          <p style="font-size: 0.85rem; line-height: 1.6; max-width: 320px; color: #888;">
-            Sàn giao dịch xa xỉ hàng đầu thế giới, cung cấp các danh mục bất động sản, siêu xe, du thuyền và chuyên cơ đẳng cấp nhất.
-          </p>
-        </div>
-        
-        <div>
-          <h4 class="footer-col-heading">Danh mục</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html#tab-realestate">Bất động sản</a></li>
-            <li><a href="index.html#tab-cars-market">Xe đang giao dịch</a></li>
-            <li><a href="index.html#tab-cars">Siêu xe độc bản</a></li>
-            <li><a href="index.html#tab-yachts">Du thuyền & Chuyên cơ</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-heading">Công ty</h4>
-          <ul class="footer-links-list">
-            <li><a href="article.html?id=301">Giới thiệu</a></li>
-            <li><a href="article.html?id=304">Liên hệ</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Zalo Floating Button -->
-  <a href="https://zalo.me/0906060036" class="zalo-floating-btn" target="_blank" rel="noopener noreferrer">
-    <div class="zalo-pulse"></div>
-    <div class="zalo-icon"><i class="fa-solid fa-comment-dots"></i></div>
-  </a>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const articleId = parseInt(urlParams.get('id'));
-      
-      const container = document.getElementById('article-container');
-      
-      if (!articleId) {
-        container.innerHTML = '<div style="text-align: center; padding: 100px;">Không tìm thấy bài viết.</div>';
-        return;
-      }
-      
-      fetch('data/posts.json?t=' + new Date().getTime())
-        .then(response => response.json())
-        .then(posts => {
-          const post = posts.find(p => p.id === articleId);
-          if (post) {
-            document.title = post.title + ' - HUỲNH HOÀNG THỊNH';
-            
-            container.innerHTML = `
-              <div class="article-header">
-                <div class="container">
-                  <div class="article-meta">${post.date} &bull; <span style="color: #c9a96e; font-weight: 700; letter-spacing: 0.05em;">${post.category_label || 'TẠP CHÍ XA XỈ'}</span></div>
-                  <h1 class="article-title">${post.title}</h1>
-                </div>
-              </div>
-              
-              <div class="container">
-                <div class="article-featured-image">
-                  <img src="${post.image}" alt="${post.title}">
-                </div>
-                
-                <article class="article-content">
-                  ${post.content}
-                </article>
-              </div>
-            `;
-          } else {
-             container.innerHTML = '<div style="text-align: center; padding: 100px;">Không tìm thấy bài viết.</div>';
-          }
-        })
-        .catch(err => {
-          console.error(err);
-          container.innerHTML = '<div style="text-align: center; padding: 100px;">Lỗi tải bài viết.</div>';
-        });
-    });
-  </script>
-  <script src="js/app.js?v=20260903_1"></script>
-  <script src="js/ai-chatbot.js?v=20260902_1"></script>
+  <script src="/js/app.js?v=20260903_1"></script>
 </body>
 </html>
