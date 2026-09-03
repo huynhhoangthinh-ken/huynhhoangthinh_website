@@ -1,0 +1,12 @@
+# Cloudflare Pages Headers Configuration
+# Chống index ảnh hàng loạt và hạn chế hotlink
+
+/assets/*
+  X-Robots-Tag: noimageindex, noarchive
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=604800, immutable
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff

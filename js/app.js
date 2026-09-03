@@ -380,4 +380,121 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }, {passive: true});
   }
+
+  // ==========================================
+  // IMAGE & ASSET PROTECTION SYSTEM (Rate Limiter: 5 images / 5 mins)
+  // ==========================================
+  (function initImageProtection() {
+    // 1. Create luxury toast element
+    var toast = document.createElement('div');
+    toast.id = 'imageProtectToast';
+    toast.className = 'image-protect-toast';
+    toast.innerHTML = '<i class="fa-solid fa-shield-halved" id="imageProtectIcon"></i><span id="imageProtectToastMsg">Hình ảnh thuộc bản quyền của huynhhoangthinh.com</span>';
+    document.body.appendChild(toast);
+
+    var toastTimeout = null;
+    function showToast(message, iconClass) {
+      var msgEl = document.getElementById('imageProtectToastMsg');
+      var iconEl = document.getElementById('imageProtectIcon');
+      if (msgEl) msgEl.textContent = message;
+      if (iconEl) iconEl.className = 'fa-solid ' + (iconClass || 'fa-shield-halved');
+      toast.classList.add('show');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(function() {
+        toast.classList.remove('show');
+      }, 3200);
+    }
+
+    // 2. Download Rate Limiter (Max 5 images in 5 minutes)
+    var RATE_LIMIT_COUNT = 5;
+    var RATE_LIMIT_WINDOW = 5 * 60 * 1000; // 5 minutes in ms
+
+    function canDownloadImage() {
+      try {
+        var now = Date.now();
+        var history = JSON.parse(localStorage.getItem('hh_image_downloads') || '[]');
+        // Filter out records older than 5 minutes
+        history = history.filter(function(t) { return now - t < RATE_LIMIT_WINDOW; });
+        
+        if (history.length >= RATE_LIMIT_COUNT) {
+          var oldestTime = history[0];
+          var waitSeconds = Math.ceil((RATE_LIMIT_WINDOW - (now - oldestTime)) / 1000);
+          var waitMinutes = Math.ceil(waitSeconds / 60);
+          showToast('⚠️ Giới hạn: Chỉ được tải tối đa 5 ảnh trong 5 phút. Vui lòng thử lại sau ' + waitMinutes + ' phút.', 'fa-triangle-exclamation');
+          return false;
+        }
+        
+        // Record new download
+        history.push(now);
+        localStorage.setItem('hh_image_downloads', JSON.stringify(history));
+        return true;
+      } catch (err) {
+        return true;
+      }
+    }
+
+    // Export rate limiter to global scope
+    window.canDownloadImage = canDownloadImage;
+
+    // 3. Block Context Menu (Right-Click) on all Images & Figures
+    document.addEventListener('contextmenu', function(e) {
+      var target = e.target;
+      var isImage = target.tagName === 'IMG' || 
+                    target.tagName === 'PICTURE' || 
+                    target.closest('.card-image') || 
+                    target.closest('.article-content figure') || 
+                    target.closest('.post-figure') ||
+                    target.closest('.gallery-grid') ||
+                    (target.style.backgroundImage && target.style.backgroundImage !== 'none');
+                    
+      if (isImage) {
+        e.preventDefault();
+        e.stopPropagation();
+        showToast('Bản quyền hình ảnh thuộc về tác giả. Vui lòng không sao chép trái phép!');
+        return false;
+      }
+    }, true);
+
+    // 4. Block Drag & Drop of Images
+    document.addEventListener('dragstart', function(e) {
+      if (e.target && (e.target.tagName === 'IMG' || e.target.closest('img'))) {
+        e.preventDefault();
+        return false;
+      }
+    }, true);
+
+    // 5. Block Keyboard Shortcuts for saving / viewing source
+    document.addEventListener('keydown', function(e) {
+      // Ctrl+S / Cmd+S (Save Page)
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+        showToast('Tính năng lưu trang bị khóa để bảo vệ bản quyền nội dung.', 'fa-lock');
+        return false;
+      }
+      // Ctrl+U / Cmd+Option+U (View Source)
+      if ((e.ctrlKey || (e.metaKey && e.altKey)) && (e.key === 'u' || e.key === 'U')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // 6. Intercept any direct download anchor clicks
+    document.addEventListener('click', function(e) {
+      var anchor = e.target.closest('a');
+      if (anchor) {
+        var href = anchor.getAttribute('href') || '';
+        var isImgDownload = anchor.hasAttribute('download') || 
+                           /\.(webp|jpg|jpeg|png|avif)(\?.*)?$/i.test(href);
+        if (isImgDownload) {
+          if (!canDownloadImage()) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          }
+        }
+      }
+    }, true);
+
+  })();
 });
+
